@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Google.Api;
-using Google.Cloud.Firestore;
-using Google.Cloud.Firestore.V1;
+﻿using Google.Cloud.Firestore;
 using Firebase.Auth;
-using System.ComponentModel;
 
 namespace Quadriga
 {
@@ -42,25 +34,27 @@ namespace Quadriga
                 }
                 else
                 {
-                    regStatus = true;
                     Dictionary<string, object> accountData = new Dictionary<string, object>
                 {
-                    { "email", email },
+                    {"email", email },
                     {"password", password },
-                    {"ID", 0 },
+                    {"lvl", 0 },
                     {"firstname", firstname },
                     { "middlename", middlename },
                     { "lastname", lastname },
                 };
                     DocumentReference addDocUser = await database.Collection("accounts").AddAsync(accountData);
+                    MessageBox.Show("Registration was successful!");
                     regStatus = true;
-                    MessageBox.Show(addDocUser.Id.ToString());
+                    
                 }
             }
             catch(Exception e)
             {
+                
                 ex = e.Message;
             }
+
         }
 
         public async Task LoginWithEmailAndPassword(string email, string password)
@@ -88,6 +82,11 @@ namespace Quadriga
             {
                 //
             }
+        }
+
+        public async Task GetLVL()
+        {
+
         }
 
     }
