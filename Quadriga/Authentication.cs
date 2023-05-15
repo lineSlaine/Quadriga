@@ -14,7 +14,8 @@ namespace Quadriga
     {
         FirestoreDb database;
         FirebaseAuthProvider provider;
-        public bool authStatus; 
+        public bool authStatus;
+        public int LVL = -1;
 
         public Authentication()
         {
@@ -37,6 +38,13 @@ namespace Quadriga
             catch 
             { 
                 authStatus = false;
+            }
+            finally
+            {
+                if (authStatus)
+                {
+
+                }
             }
 
         }
