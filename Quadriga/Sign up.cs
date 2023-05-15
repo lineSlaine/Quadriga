@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,13 +13,17 @@ namespace Quadriga
 {
     public partial class Registration : Form
     {
-        Color activeColor = Color.FromArgb(51, 51, 76);
-        Color inactiveColor = Color.Silver;
+        readonly Color activeColor = Color.FromArgb(51, 51, 76);
+        readonly Color inactiveColor = Color.Silver;
+        readonly Regex email = new(@"^(?("")(""[^""]+?""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9]{2,17}))$");
         FormMain owner;
-        public Registration(FormMain owner)
+        Authentication Authentication;
+        public Registration(FormMain owner, Authentication authentication)
         {
             InitializeComponent();
             this.owner = owner;
+            Authentication = authentication;
         }
 
         private void Registration_Load(object sender, EventArgs e)
@@ -32,7 +37,7 @@ namespace Quadriga
             if(FirstnameCheck()&& MiddlenameCheck()&& LastnameCheck()&& EmailCheck()&& PasswordCheck())
             {
                 MessageBox.Show("Registration is successful!");
-                owner.OpenChildForm(new Login(owner));
+                owner.OpenChildForm(new Login(owner, Authentication));
             }
         }
 
@@ -82,7 +87,7 @@ namespace Quadriga
         }
         private bool EmailCheck()
         {
-            if (textUsername.Text.Trim() == "")
+            if (textUsername.Text.Trim() == "" || !email.IsMatch(textUsername.Text.ToLower()))
             {
                 labelIncorrectEmail.Visible = true;
                 return false;

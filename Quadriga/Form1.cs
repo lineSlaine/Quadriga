@@ -1,3 +1,4 @@
+using Google.Api;
 using System.Runtime.InteropServices;
 
 namespace Quadriga
@@ -10,6 +11,8 @@ namespace Quadriga
         readonly Color baseColor = Color.FromArgb(51, 51, 76);
         readonly Color selectColor = Color.FromArgb(65, 65, 90);
         public int LVL;
+        Authentication authentication;
+
 
         public FormMain()
         {
@@ -23,7 +26,7 @@ namespace Quadriga
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             logoPanel.Visible = false;
             menuPanel.Visible = false;
-            OpenChildForm(new Login(this));
+            OpenChildForm(new Login(this, authentication));
         }
         public void LoginPass()
         {
@@ -120,7 +123,7 @@ namespace Quadriga
 
         private void DisableButton()
         {
-            foreach(Control prevBtn in menuPanel.Controls)
+            foreach(System.Windows.Forms.Control prevBtn in menuPanel.Controls)
             {
                 if(prevBtn.GetType() == typeof(Button))
                 {
@@ -213,6 +216,7 @@ namespace Quadriga
 
         private void FormMain_Load(object sender, EventArgs e)
         {
+            authentication = new Authentication();
             StartProgram();
         }
 

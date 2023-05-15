@@ -82,15 +82,15 @@
             // labelError
             // 
             this.labelError.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelError.AutoSize = true;
             this.labelError.BackColor = System.Drawing.Color.Transparent;
             this.labelError.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelError.ForeColor = System.Drawing.Color.IndianRed;
-            this.labelError.Location = new System.Drawing.Point(284, 302);
+            this.labelError.Location = new System.Drawing.Point(144, 302);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(178, 19);
+            this.labelError.Size = new System.Drawing.Size(540, 19);
             this.labelError.TabIndex = 9;
             this.labelError.Text = "Incorrect Email or Password";
+            this.labelError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelError.Visible = false;
             // 
             // labelIncorrectEmail
