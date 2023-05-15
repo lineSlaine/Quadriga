@@ -43,7 +43,7 @@ namespace Quadriga
                     { "middlename", middlename },
                     { "lastname", lastname },
                 };
-                    DocumentReference addDocUser = await database.Collection("accounts").AddAsync(accountData);
+                    await database.Collection("accounts").Document(email).SetAsync(accountData);
                     MessageBox.Show("Registration was successful!");
                     regStatus = true;
                     
