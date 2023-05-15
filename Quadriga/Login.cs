@@ -96,7 +96,7 @@ namespace Quadriga
 
         private void EnterLogin()
         {
-            owner.LVL = LoginLVL();
+            owner.LVL = authentication.LVL;
             owner.LoginPass();
 
         }
@@ -106,14 +106,6 @@ namespace Quadriga
 
             await authentication.LoginWithEmailAndPassword(textUsername.Text.Trim(), textPassword.Text);
            
-        }
-
-        private int LoginLVL()
-        {
-            //return 2;
-            return 1;
-            //return 0;
-            //return -1;
         }
 
         private void LabelSignUp_Click(object sender, EventArgs e)
