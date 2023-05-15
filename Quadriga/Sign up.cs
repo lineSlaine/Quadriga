@@ -18,12 +18,12 @@ namespace Quadriga
         readonly Regex email = new(@"^(?("")(""[^""]+?""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
                 @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9]{2,17}))$");
         FormMain owner;
-        Authentication Authentication;
+        Authentication authentication;
         public Registration(FormMain owner, Authentication authentication)
         {
             InitializeComponent();
             this.owner = owner;
-            Authentication = authentication;
+            this.authentication = authentication;
         }
 
         private void Registration_Load(object sender, EventArgs e)
@@ -31,13 +31,41 @@ namespace Quadriga
 
         }
 
-        private void buttonEnter_Click(object sender, EventArgs e)
+        private async void buttonEnter_Click(object sender, EventArgs e)
         {
+            Clear();
+            buttonEnter.BackColor = inactiveColor;
+            buttonEnter.Enabled = false;
             FirstnameCheck(); MiddlenameCheck(); LastnameCheck(); EmailCheck(); PasswordCheck();
             if(FirstnameCheck()&& MiddlenameCheck()&& LastnameCheck()&& EmailCheck()&& PasswordCheck())
             {
-                MessageBox.Show("Registration is successful!");
-                owner.OpenChildForm(new Login(owner, Authentication));
+                Task task = authentication.Registration(textUsername.Text.Trim(), textPassword.Text, textFirstname.Text.Trim(), textMiddlename.Text.Trim(), textLastname.Text.Trim());
+                await task;
+                if (authentication.regStatus)
+                {
+                    
+                    owner.OpenChildForm(new Login(owner, authentication));
+                }
+                else
+                {
+                    labelError.Text = authentication.ex;
+                }
+                
+            }
+
+
+
+
+
+            if (checkAgree.Checked)
+            {
+                buttonEnter.BackColor = activeColor;
+                buttonEnter.Enabled = true;
+            }
+            else
+            {
+                buttonEnter.BackColor = inactiveColor;
+                buttonEnter.Enabled = false;
             }
         }
 
@@ -104,6 +132,16 @@ namespace Quadriga
             }
             else labelIncorrectPass.Visible = false;
             return true;
+        }
+
+        private void Clear()
+        {
+            labelIncorrectPass.Visible = false;
+            labelIncorrectEmail.Visible = false;
+            labelIncorrectLast.Visible = false;
+            labelIncorrectMiddle.Visible = false;
+            labelIncorrectFirst.Visible = false;
+            labelError.Visible = false;
         }
     }
 }

@@ -42,7 +42,7 @@ namespace Quadriga
             
             try
             {
-                //database = FirestoreDb.Create("quadriga - f25ff");
+                database = FirestoreDb.Create("quadriga - f25ff");
                 provider = new FirebaseAuthProvider( new FirebaseConfig(API_KEY));
                 return true;
             }

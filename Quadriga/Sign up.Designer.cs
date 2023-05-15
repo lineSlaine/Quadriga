@@ -46,11 +46,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textUsername = new System.Windows.Forms.TextBox();
             this.textPassword = new System.Windows.Forms.TextBox();
+            this.labelError = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.labelError);
             this.panel1.Controls.Add(this.labelIncorrectFirst);
             this.panel1.Controls.Add(this.labelIncorrectMiddle);
             this.panel1.Controls.Add(this.labelIncorrectLast);
@@ -287,6 +289,20 @@
             this.textPassword.Size = new System.Drawing.Size(256, 23);
             this.textPassword.TabIndex = 5;
             // 
+            // labelError
+            // 
+            this.labelError.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelError.BackColor = System.Drawing.Color.Transparent;
+            this.labelError.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelError.ForeColor = System.Drawing.Color.IndianRed;
+            this.labelError.Location = new System.Drawing.Point(130, 408);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(540, 19);
+            this.labelError.TabIndex = 21;
+            this.labelError.Text = "Incorrect Email or Password";
+            this.labelError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelError.Visible = false;
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -322,5 +338,6 @@
         private Label labelIncorrectMiddle;
         private Label labelIncorrectLast;
         private Label labelIncorrectPass;
+        private Label labelError;
     }
 }

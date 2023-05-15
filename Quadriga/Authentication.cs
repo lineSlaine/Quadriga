@@ -17,20 +17,51 @@ namespace Quadriga
         FirebaseAuthProvider provider;
         FirebaseAuthLink firebaseAuthLink;
         public bool authStatus;
+        public bool regStatus = false;
         public int LVL = -1;
         public string ex = null;
 
-        public Authentication()
+        public Authentication(FirestoreDb database)
         {
-            database = DatabaseHelper.database;
+            this.database = database;
             provider = DatabaseHelper.provider;
             authStatus = false;
         }
 
-        //public async void M()
-        //{
-        //    FirebaseAuthLink firebaseAuthLink = await provider.CreateUserWithEmailAndPasswordAsync("MeysamLoxPidor@gmail.com", "kek123123", "Monkey");
-        //}
+        public async Task Registration(string email, string password, string firstname, string middlename, string lastname)
+        {
+            regStatus = false;
+            //FirebaseAuthLink firebaseAuthLink = await provider.CreateUserWithEmailAndPasswordAsync("MeysamLoxPidor@gmail.com", "kek123123", "Monkey");
+            try
+            {
+                firebaseAuthLink = await provider.CreateUserWithEmailAndPasswordAsync(email, password, middlename);
+                if (firebaseAuthLink.FirebaseToken == null)
+                {
+                    regStatus = false; ex = "Incorrect Email or Password";
+
+                }
+                else
+                {
+                    regStatus = true;
+                    Dictionary<string, object> accountData = new Dictionary<string, object>
+                {
+                    { "email", email },
+                    {"password", password },
+                    {"ID", 0 },
+                    {"firstname", firstname },
+                    { "middlename", middlename },
+                    { "lastname", lastname },
+                };
+                    DocumentReference addDocUser = await database.Collection("accounts").AddAsync(accountData);
+                    regStatus = true;
+                    MessageBox.Show(addDocUser.Id.ToString());
+                }
+            }
+            catch(Exception e)
+            {
+                ex = e.Message;
+            }
+        }
 
         public async Task LoginWithEmailAndPassword(string email, string password)
         {

@@ -1,4 +1,5 @@
 using Google.Api;
+using Google.Cloud.Firestore;
 using System.Runtime.InteropServices;
 
 namespace Quadriga
@@ -12,10 +13,13 @@ namespace Quadriga
         readonly Color selectColor = Color.FromArgb(65, 65, 90);
         public int LVL;
         Authentication authentication;
+        FirestoreDb database;
 
 
-        public FormMain()
+        public FormMain(FirestoreDb database)
         {
+            this.database = database;
+            authentication = new Authentication(database);
             InitializeComponent();
         }
 
@@ -216,7 +220,6 @@ namespace Quadriga
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            authentication = new Authentication();
             StartProgram();
         }
 

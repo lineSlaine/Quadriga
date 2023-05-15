@@ -15,9 +15,7 @@ namespace Quadriga
             ApplicationConfiguration.Initialize();
             if (DatabaseHelper.SetDatabase())
             {
-                //Authentication a = new Authentication();
-                //a.M();
-                Application.Run(new FormMain());
+                Application.Run(new FormMain(DatabaseHelper.database));
             }
             else MessageBox.Show("Error");
 
