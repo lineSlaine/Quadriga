@@ -32,42 +32,48 @@ namespace Quadriga
 
         private async void ButtonEnter_Click(object sender, EventArgs e)
         {
-            Clear();
-            buttonEnter.Enabled = false;
-            buttonEnter.BackColor = disableColor;
-            if (textUsername.Text.Trim() == "" || !email.IsMatch(textUsername.Text.ToLower())) 
+            if (checkRemember.Checked)
             {
-               
-                if(labelIncorrectEmail.Visible == false) IncorrectEmailMessage();
-                if (labelIncorrectPass.Visible == true) IncorrectPasswordMessage();
-                if(labelError.Visible == true) IncorrectMessage();
-                buttonEnter.Enabled = true;
-                buttonEnter.BackColor = baseColor;
-            }
-            else if (textPassword.Text.Trim() == "" || textPassword.Text.Length < 8) 
-            {
-                if (labelIncorrectPass.Visible == false) IncorrectPasswordMessage();
-                if (labelIncorrectEmail.Visible == true) IncorrectEmailMessage();
-                if (labelError.Visible == true) IncorrectMessage();
-                buttonEnter.Enabled = true;
-                buttonEnter.BackColor = baseColor;
+
             }
             else
             {
-                await LoginCheck(); 
-
-                if (authentication.authStatus)
+                Clear();
+                buttonEnter.Enabled = false;
+                buttonEnter.BackColor = disableColor;
+                if (textUsername.Text.Trim() == "" || !email.IsMatch(textUsername.Text.ToLower()))
                 {
-                    EnterLogin();
+
+                    if (labelIncorrectEmail.Visible == false) IncorrectEmailMessage();
+                    if (labelIncorrectPass.Visible == true) IncorrectPasswordMessage();
+                    if (labelError.Visible == true) IncorrectMessage();
+                    buttonEnter.Enabled = true;
+                    buttonEnter.BackColor = baseColor;
+                }
+                else if (textPassword.Text.Trim() == "" || textPassword.Text.Length < 8)
+                {
+                    if (labelIncorrectPass.Visible == false) IncorrectPasswordMessage();
+                    if (labelIncorrectEmail.Visible == true) IncorrectEmailMessage();
+                    if (labelError.Visible == true) IncorrectMessage();
+                    buttonEnter.Enabled = true;
+                    buttonEnter.BackColor = baseColor;
                 }
                 else
                 {
-                Clear();
-                IncorrectMessage();
+                    await LoginCheck();
 
+                    if (authentication.authStatus)
+                    {
+                        EnterLogin();
+                    }
+                    else
+                    {
+                        Clear();
+                        IncorrectMessage();
+
+                    }
                 }
-            }
-                
+            }    
         }
 
         private void IncorrectPasswordMessage()
@@ -135,6 +141,11 @@ namespace Quadriga
         private void LabelSignUp_MouseLeave(object sender, EventArgs e)
         {
             labelSignUp.ForeColor = inactiveColor;
+        }
+
+        private void checkRemember_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

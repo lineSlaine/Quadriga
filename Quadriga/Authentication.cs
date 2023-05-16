@@ -1,6 +1,7 @@
 ﻿using Google.Cloud.Firestore;
 using Firebase.Auth;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Quadriga
 {
@@ -48,6 +49,9 @@ namespace Quadriga
                     {"firstname", firstname },
                     { "middlename", middlename },
                     { "lastname", lastname },
+                    { "jobtitle", ""},
+                    { "groups", new List<string>()}
+
                 };
                     await database.Collection("accounts").Document(email).SetAsync(accountData);
                     MessageBox.Show("Registration was successful!");
@@ -128,5 +132,12 @@ namespace Quadriga
             }
         }
 
+        public void LogOut()
+        {
+            firebaseAuthLink = null;
+            LVL = -1;
+            authStatus = false;
+            ex = null;
+        }
     }
 }

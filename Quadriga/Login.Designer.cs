@@ -145,6 +145,7 @@
             this.checkRemember.TabIndex = 6;
             this.checkRemember.Text = "Remember me";
             this.checkRemember.UseVisualStyleBackColor = true;
+            this.checkRemember.CheckedChanged += new System.EventHandler(this.checkRemember_CheckedChanged);
             // 
             // buttonEnter
             // 
