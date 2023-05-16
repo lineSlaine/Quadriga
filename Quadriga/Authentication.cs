@@ -105,7 +105,7 @@ namespace Quadriga
                     LVL = Convert.ToInt32(lvl);
                     ex = null;
                 }
-                ex = "Database connection error";
+                else ex = "Database connection error";
             }
             catch(Exception ex)
             {

@@ -32,16 +32,12 @@ namespace Quadriga
             menuPanel.Visible = false;
             OpenChildForm(new Login(this, authentication));
         }
-        public void LoginPass()
+        void LoadMEnu()
         {
-            if (LoadMenu(LVL))
-            {
                 logoPanel.Visible = true;
                 menuPanel.Visible = true;
                 CloseActiveForm();
                 labelTitle.Text = "HOME";
-            }
-            
         }
         public void CloseActiveForm()
         {
@@ -49,7 +45,7 @@ namespace Quadriga
             activeForm = null;
         }
 
-        private bool LoadMenu(int LVL)
+        public bool LoadLVL()
         {
             if (LVL == 0)
             {
@@ -58,11 +54,13 @@ namespace Quadriga
 
                 buttonReports.Enabled = false;
                 buttonReports.Visible = false;
+                LoadMEnu();
             }
             else if (LVL == 1)
             {
                 buttonStatistics.Enabled = false;
                 buttonStatistics.Visible = false;
+                LoadMEnu();
             }
             else if (LVL == 2)
             {
@@ -71,10 +69,10 @@ namespace Quadriga
 
                 buttonStatistics.Enabled = false;
                 buttonStatistics.Visible = false;
+                LoadMEnu();
             }
             else
             {
-                MessageBox.Show("Ошибка прогрузки меню");
                 return false;
             }
             return true;

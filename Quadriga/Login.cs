@@ -85,7 +85,7 @@ namespace Quadriga
             labelError.Text = authentication.ex;
             labelError.Visible = !labelError.Visible;
         }
-        private void Clear()
+        public void Clear()
         {
             labelError.Visible = false;
             labelIncorrectEmail.Visible = false;
@@ -101,7 +101,11 @@ namespace Quadriga
             if(authentication.ex == null)
             {
                 owner.LVL = authentication.LVL;
-                owner.LoginPass();
+                if (!owner.LoadLVL())
+                {
+                    Clear();
+                    MessageBox.Show("Ошибка прогрузки меню");
+                }
             }
             else
             {
