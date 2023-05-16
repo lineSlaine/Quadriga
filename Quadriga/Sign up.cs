@@ -125,7 +125,7 @@ namespace Quadriga
         }
         private bool PasswordCheck()
         {
-            if (textPassword.Text.Trim() == "")
+            if(textPassword.Text.Trim() == "" || textPassword.Text.Length < 8)
             {
                 labelIncorrectPass.Visible = true;
                 return false;

@@ -44,7 +44,7 @@ namespace Quadriga
                 buttonEnter.Enabled = true;
                 buttonEnter.BackColor = baseColor;
             }
-            else if (textPassword.Text.Trim() == "") 
+            else if (textPassword.Text.Trim() == "" || textPassword.Text.Length < 8) 
             {
                 if (labelIncorrectPass.Visible == false) IncorrectPasswordMessage();
                 if (labelIncorrectEmail.Visible == true) IncorrectEmailMessage();
