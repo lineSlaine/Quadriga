@@ -39,7 +39,7 @@ namespace Quadriga
             FirstnameCheck(); MiddlenameCheck(); LastnameCheck(); EmailCheck(); PasswordCheck();
             if(FirstnameCheck()&& MiddlenameCheck()&& LastnameCheck()&& EmailCheck()&& PasswordCheck())
             {
-                Task task = authentication.Registration(textUsername.Text.Trim(), textPassword.Text, textFirstname.Text.Trim(), textMiddlename.Text.Trim(), textLastname.Text.Trim());
+                Task task = authentication.RegistrationOwner(textUsername.Text.Trim(), textPassword.Text, textFirstname.Text.Trim(), textMiddlename.Text.Trim(), textLastname.Text.Trim());
                 await task;
                 if (authentication.regStatus)
                 {
@@ -143,5 +143,6 @@ namespace Quadriga
             labelIncorrectFirst.Visible = false;
             labelError.Visible = false;
         }
+
     }
 }

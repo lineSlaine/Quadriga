@@ -32,6 +32,19 @@ namespace Quadriga
             menuPanel.Visible = false;
             OpenChildForm(new Login(this, authentication));
         }
+
+        public void Logout()
+        {
+            logoPanel.Visible = false;
+            menuPanel.Visible = false;
+            CloseActiveForm();
+            this.Text = String.Empty;
+            this.ControlBox = false;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            logoPanel.Visible = false;
+            menuPanel.Visible = false;
+            OpenChildForm(new Login(this, authentication));
+        }
         void LoadMEnu()
         {
                 logoPanel.Visible = true;
@@ -177,7 +190,7 @@ namespace Quadriga
         private void ButtonSettings_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new Settings(this));
+            OpenChildForm(new Settings(this, authentication));
         }
 
         private void PanelTitle_MouseDown(object sender, MouseEventArgs e)

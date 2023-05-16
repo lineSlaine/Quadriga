@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.Logging;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,15 +17,31 @@ namespace Quadriga
         Button currentButton;
         readonly Color baseColor = Color.FromArgb(65, 65, 90);
         readonly Color selectColor;
+        Form activeForm;
+        Authentication authentication;
 
-        public Settings(FormMain owner)
+        public Settings(FormMain owner, Authentication authentication)
         {
             InitializeComponent();
             this.owner = owner;
+            this.authentication = authentication;
         }
 
         private void Settings_Load(object sender, EventArgs e)
         {
+
+        }
+        public void OpenChildForm(Form childForm)
+        {
+            if (activeForm != null) activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panelActiveForm.Controls.Add(childForm);
+            this.panelActiveForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
 
         }
         public void ActivateButton(object sender)
@@ -54,10 +71,19 @@ namespace Quadriga
                 }
             }
         }
-
+        public void LogOut()
+        {
+            owner.Logout();
+        }
         private void ButtonGeneralSetting_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+        }
+
+        private void buttonProfile_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            OpenChildForm(new SettingProfile(this, authentication));
         }
     }
 }

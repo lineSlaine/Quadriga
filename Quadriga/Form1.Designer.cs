@@ -39,13 +39,13 @@
             this.buttonGSettings = new System.Windows.Forms.Button();
             this.buttonSettings = new System.Windows.Forms.Button();
             this.logoPanel = new System.Windows.Forms.Panel();
-            this.labelLogo = new System.Windows.Forms.Label();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.buttonMin = new System.Windows.Forms.Button();
             this.buttonMax = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.labelTitle = new System.Windows.Forms.Label();
             this.panelActiveForm = new System.Windows.Forms.Panel();
+            this.panellogo = new System.Windows.Forms.Panel();
             this.menuPanel.SuspendLayout();
             this.logoPanel.SuspendLayout();
             this.panelTitle.SuspendLayout();
@@ -141,16 +141,10 @@
             // logoPanel
             // 
             this.logoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.logoPanel.Controls.Add(this.labelLogo);
+            this.logoPanel.Controls.Add(this.panellogo);
             resources.ApplyResources(this.logoPanel, "logoPanel");
             this.logoPanel.Name = "logoPanel";
             this.logoPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LogoPanel_MouseDown);
-            // 
-            // labelLogo
-            // 
-            resources.ApplyResources(this.labelLogo, "labelLogo");
-            this.labelLogo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelLogo.Name = "labelLogo";
             // 
             // panelTitle
             // 
@@ -204,6 +198,11 @@
             resources.ApplyResources(this.panelActiveForm, "panelActiveForm");
             this.panelActiveForm.Name = "panelActiveForm";
             // 
+            // panellogo
+            // 
+            resources.ApplyResources(this.panellogo, "panellogo");
+            this.panellogo.Name = "panellogo";
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -217,7 +216,6 @@
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.menuPanel.ResumeLayout(false);
             this.logoPanel.ResumeLayout(false);
-            this.logoPanel.PerformLayout();
             this.panelTitle.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -233,7 +231,6 @@
         private Button buttonMin;
         private Button buttonMax;
         private Button buttonClose;
-        private Label labelLogo;
         private Label labelTitle;
         private Button buttonTasks;
         private Button buttonMessages;
@@ -242,5 +239,6 @@
         private Button buttonReports;
         private Button buttonLPeople;
         private Panel panelActiveForm;
+        private Panel panellogo;
     }
 }

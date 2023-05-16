@@ -372,40 +372,61 @@
   <data name="&gt;&gt;buttonSettings.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="labelLogo.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="panellogo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        AElFTkSuQmCC
+</value>
   </data>
-  <data name="labelLogo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="panellogo.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
   </data>
-  <data name="labelLogo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Rage Italic, 36pt</value>
+  <data name="panellogo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
   </data>
-  <data name="labelLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelLogo.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="panellogo.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="labelLogo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 61</value>
+  <data name="panellogo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 66</value>
   </data>
-  <data name="labelLogo.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="panellogo.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
-  <data name="labelLogo.Text" xml:space="preserve">
-    <value>Quadriga</value>
+  <data name="&gt;&gt;panellogo.Name" xml:space="preserve">
+    <value>panellogo</value>
   </data>
-  <data name="&gt;&gt;labelLogo.Name" xml:space="preserve">
-    <value>labelLogo</value>
+  <data name="&gt;&gt;panellogo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelLogo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLogo.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panellogo.Parent" xml:space="preserve">
     <value>logoPanel</value>
   </data>
-  <data name="&gt;&gt;labelLogo.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panellogo.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="logoPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">

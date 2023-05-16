@@ -27,7 +27,7 @@ namespace Quadriga
             authStatus = false;
         }
 
-        public async Task Registration(string email, string password, string firstname, string middlename, string lastname)
+        public async Task RegistrationOwner(string email, string password, string firstname, string middlename, string lastname)
         {
             regStatus = false;
             try
@@ -93,6 +93,7 @@ namespace Quadriga
 
         public async Task GetLVL()
         {
+            ex = null;
             try
             {
                 DocumentReference reference = database.Collection("accounts").Document(firebaseAuthLink.User.Email);
@@ -105,6 +106,21 @@ namespace Quadriga
                     ex = null;
                 }
                 else ex = "Database connection error";
+            }
+            catch(Exception ex)
+            {
+                this.ex = ex.Message;
+            }
+        }
+
+        public async Task DeleteAccount()
+        {
+            try
+            {
+                
+                DocumentReference reference = database.Collection("accounts").Document(firebaseAuthLink.User.Email);
+                await reference.DeleteAsync();
+                await provider.DeleteUserAsync(firebaseAuthLink.FirebaseToken);
             }
             catch(Exception ex)
             {

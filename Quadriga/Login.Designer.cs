@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panellogo = new System.Windows.Forms.Panel();
             this.labelSignUp = new System.Windows.Forms.Label();
             this.labelError = new System.Windows.Forms.Label();
             this.labelIncorrectEmail = new System.Windows.Forms.Label();
@@ -39,12 +41,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textPassword = new System.Windows.Forms.TextBox();
             this.textUsername = new System.Windows.Forms.TextBox();
-            this.labelLogo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panellogo);
             this.panel1.Controls.Add(this.labelSignUp);
             this.panel1.Controls.Add(this.labelError);
             this.panel1.Controls.Add(this.labelIncorrectEmail);
@@ -55,12 +57,21 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textPassword);
             this.panel1.Controls.Add(this.textUsername);
-            this.panel1.Controls.Add(this.labelLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(829, 495);
             this.panel1.TabIndex = 0;
+            // 
+            // panellogo
+            // 
+            this.panellogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panellogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panellogo.BackgroundImage")));
+            this.panellogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panellogo.Location = new System.Drawing.Point(285, 17);
+            this.panellogo.Name = "panellogo";
+            this.panellogo.Size = new System.Drawing.Size(258, 115);
+            this.panellogo.TabIndex = 11;
             // 
             // labelSignUp
             // 
@@ -196,19 +207,6 @@
             this.textUsername.Size = new System.Drawing.Size(256, 23);
             this.textUsername.TabIndex = 0;
             // 
-            // labelLogo
-            // 
-            this.labelLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelLogo.AutoSize = true;
-            this.labelLogo.Font = new System.Drawing.Font("Rage Italic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelLogo.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.labelLogo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelLogo.Location = new System.Drawing.Point(320, 58);
-            this.labelLogo.Name = "labelLogo";
-            this.labelLogo.Size = new System.Drawing.Size(189, 61);
-            this.labelLogo.TabIndex = 5;
-            this.labelLogo.Text = "Quadriga";
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -231,11 +229,11 @@
         private Label label1;
         private TextBox textPassword;
         private TextBox textUsername;
-        private Label labelLogo;
         private CheckBox checkRemember;
         private Label labelIncorrectPass;
         private Label labelIncorrectEmail;
         private Label labelError;
         private Label labelSignUp;
+        private Panel panellogo;
     }
 }
