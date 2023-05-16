@@ -30,7 +30,6 @@ namespace Quadriga
         public async Task Registration(string email, string password, string firstname, string middlename, string lastname)
         {
             regStatus = false;
-            //FirebaseAuthLink firebaseAuthLink = await provider.CreateUserWithEmailAndPasswordAsync("MeysamLoxPidor@gmail.com", "kek123123", "Monkey");
             try
             {
                 firebaseAuthLink = await provider.CreateUserWithEmailAndPasswordAsync(email, password, middlename);
