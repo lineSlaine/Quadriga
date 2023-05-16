@@ -30,12 +30,15 @@
         {
             this.panelMenuSet = new System.Windows.Forms.Panel();
             this.buttonGeneralSetting = new System.Windows.Forms.Button();
+            this.buttonProfile = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelMenuSet.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenuSet
             // 
             this.panelMenuSet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(90)))));
+            this.panelMenuSet.Controls.Add(this.buttonProfile);
             this.panelMenuSet.Controls.Add(this.buttonGeneralSetting);
             this.panelMenuSet.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenuSet.Location = new System.Drawing.Point(0, 0);
@@ -59,11 +62,35 @@
             this.buttonGeneralSetting.UseVisualStyleBackColor = true;
             this.buttonGeneralSetting.Click += new System.EventHandler(this.ButtonGeneralSetting_Click);
             // 
+            // buttonProfile
+            // 
+            this.buttonProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonProfile.FlatAppearance.BorderSize = 0;
+            this.buttonProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonProfile.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonProfile.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonProfile.Location = new System.Drawing.Point(0, 52);
+            this.buttonProfile.Name = "buttonProfile";
+            this.buttonProfile.Size = new System.Drawing.Size(176, 52);
+            this.buttonProfile.TabIndex = 1;
+            this.buttonProfile.Text = " Profile";
+            this.buttonProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonProfile.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(176, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(653, 495);
+            this.panel1.TabIndex = 1;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(829, 495);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenuSet);
             this.Name = "Settings";
             this.Text = "SETTINGS";
@@ -77,5 +104,7 @@
 
         private Panel panelMenuSet;
         private Button buttonGeneralSetting;
+        private Button buttonProfile;
+        private Panel panel1;
     }
 }

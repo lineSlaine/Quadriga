@@ -47,35 +47,33 @@ namespace Quadriga
 
         public bool LoadLVL()
         {
-            if (LVL == 0)
+            switch (LVL)
             {
-                buttonTasks.Enabled = false;
-                buttonTasks.Visible = false;
+                case 0:
+                    buttonTasks.Enabled = false;
+                    buttonTasks.Visible = false;
 
-                buttonReports.Enabled = false;
-                buttonReports.Visible = false;
-                LoadMEnu();
-            }
-            else if (LVL == 1)
-            {
-                buttonStatistics.Enabled = false;
-                buttonStatistics.Visible = false;
-                LoadMEnu();
-            }
-            else if (LVL == 2)
-            {
-                buttonGSettings.Enabled = false;
-                buttonGSettings.Visible = false;
+                    buttonReports.Enabled = false;
+                    buttonReports.Visible = false;
+                    LoadMEnu();
+                    break;
+                case 1:
+                    //buttonStatistics.Enabled = false;
+                    //buttonStatistics.Visible = false;
+                    LoadMEnu();
+                    break;
+                case 2:
+                    buttonGSettings.Enabled = false;
+                    buttonGSettings.Visible = false;
 
-                buttonStatistics.Enabled = false;
-                buttonStatistics.Visible = false;
-                LoadMEnu();
+                    //buttonStatistics.Enabled = false;
+                    //buttonStatistics.Visible = false;
+                    LoadMEnu();
+                    break;
+                default:
+                    return false;
             }
-            else
-            {
-                return false;
-            }
-            return true;
+            return true; 
         }
 
         public void OpenChildForm(Form childForm)
