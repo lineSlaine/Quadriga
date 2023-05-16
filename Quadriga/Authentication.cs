@@ -1,5 +1,6 @@
 ﻿using Google.Cloud.Firestore;
 using Firebase.Auth;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Quadriga
 {
@@ -14,6 +15,12 @@ namespace Quadriga
         public string ex = null;
 
         public Authentication(FirestoreDb database)
+        {
+            this.database = database;
+            provider = DatabaseHelper.provider;
+            authStatus = false;
+        }
+        public Authentication(FirestoreDb database, User user)
         {
             this.database = database;
             provider = DatabaseHelper.provider;
@@ -70,6 +77,7 @@ namespace Quadriga
                     authStatus = false; ex = "Incorrect Email or Password";
                 }          
                 else authStatus = true;
+                
 
             }
             catch(Exception e)
@@ -86,7 +94,23 @@ namespace Quadriga
 
         public async Task GetLVL()
         {
-
+            try
+            {
+                DocumentReference reference = database.Collection("accounts").Document(firebaseAuthLink.User.Email);
+                DocumentSnapshot snapshot = await reference.GetSnapshotAsync();
+                if (snapshot.Exists)
+                {
+                    Dictionary<string, object> userValues = snapshot.ToDictionary();
+                    object lvl; userValues.TryGetValue("lvl", out lvl);
+                    LVL = Convert.ToInt32(lvl);
+                    ex = null;
+                }
+                ex = "Database connection error";
+            }
+            catch(Exception ex)
+            {
+                this.ex = ex.Message;
+            }
         }
 
     }

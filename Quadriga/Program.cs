@@ -12,7 +12,7 @@ namespace Quadriga
             // see https://aka.ms/applicationconfiguration.
             
 
-            ApplicationConfiguration.Initialize();
+           ApplicationConfiguration.Initialize();
             if (DatabaseHelper.SetDatabase())
             {
                 Application.Run(new FormMain(DatabaseHelper.database));

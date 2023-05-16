@@ -94,10 +94,20 @@ namespace Quadriga
             buttonEnter.BackColor = baseColor;
         }
 
-        private void EnterLogin()
+        private async void EnterLogin()
         {
-            owner.LVL = authentication.LVL;
-            owner.LoginPass();
+            await authentication.GetLVL();
+
+            if(authentication.ex == null)
+            {
+                owner.LVL = authentication.LVL;
+                owner.LoginPass();
+            }
+            else
+            {
+                Clear();
+                IncorrectMessage();
+            }
 
         }
 
