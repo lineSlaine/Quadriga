@@ -9,7 +9,7 @@ namespace Quadriga
     {
         FirestoreDb database;
         FirebaseAuthProvider provider;
-        FirebaseAuthLink firebaseAuthLink;
+        public FirebaseAuthLink firebaseAuthLink;
         public bool authStatus;
         public bool regStatus = false;
         public int LVL = -1;

@@ -14,12 +14,14 @@ namespace Quadriga
         public int LVL;
         Authentication authentication;
         FirestoreDb database;
+        Groups groups;
 
 
         public FormMain(FirestoreDb database)
         {
             this.database = database;
             authentication = new Authentication(database);
+            groups = new Groups(database);
             InitializeComponent();
         }
 
@@ -184,7 +186,7 @@ namespace Quadriga
         private void ButtonGSettings_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            //OpenChildForm(Form childForm);
+            OpenChildForm(new Group_settings(this, groups, authentication));
         }
 
         private void ButtonSettings_Click(object sender, EventArgs e)
