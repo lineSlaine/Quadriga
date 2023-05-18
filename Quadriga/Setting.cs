@@ -85,5 +85,11 @@ namespace Quadriga
             ActivateButton(sender);
             OpenChildForm(new SettingProfile(this, authentication));
         }
+
+        private void buttonLogOut_Click(object sender, EventArgs e)
+        {
+            authentication.LogOut();
+            owner.Logout();
+        }
     }
 }

@@ -7,8 +7,8 @@ namespace Quadriga
 {
     public class Authentication
     {
-        FirestoreDb database;
-        FirebaseAuthProvider provider;
+        public FirestoreDb database;
+        public FirebaseAuthProvider provider;
         public FirebaseAuthLink firebaseAuthLink;
         public bool authStatus;
         public bool regStatus = false;
@@ -121,10 +121,27 @@ namespace Quadriga
         {
             try
             {
-                
                 DocumentReference reference = database.Collection("accounts").Document(firebaseAuthLink.User.Email);
-                await reference.DeleteAsync();
-                await provider.DeleteUserAsync(firebaseAuthLink.FirebaseToken);
+                DocumentSnapshot snapshot = await reference.GetSnapshotAsync();
+                if (snapshot.Exists)
+                {
+                    Dictionary<string, object> userValues = snapshot.ToDictionary();
+                    userValues.TryGetValue("groups", out object groups);
+                    {
+                        if (groups == null)
+                        {
+                            await reference.DeleteAsync();
+                            await provider.DeleteUserAsync(firebaseAuthLink.FirebaseToken);
+                            ex = "Done";
+                        }
+                        else
+                        {
+                            MessageBox.Show("Delete all your groups before deleting your account");
+                            ex = "Delete all your groups before deleting your account";
+                        }
+                    }
+                }
+
             }
             catch(Exception ex)
             {
@@ -139,5 +156,6 @@ namespace Quadriga
             authStatus = false;
             ex = null;
         }
+
     }
 }

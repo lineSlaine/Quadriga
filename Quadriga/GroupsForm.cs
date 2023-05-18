@@ -42,10 +42,19 @@ namespace Quadriga
             }
             await groups.GetGroupsID(authentication.firebaseAuthLink);
             await groups.GetGroupsNames();
-            foreach(string name in groups.groupsNames)
+            try
             {
-                listBox.Items.Add(name);
+                if(groups.groupsNames != null)
+                {
+                    foreach(string name in groups.groupsNames)
+                    {
+                        listBox.Items.Add(name);
+                    }
+                }
+                
             }
+            catch { }
+            
         }
         private async void buttonAddGroup_Click(object sender, EventArgs e)
         {
@@ -63,6 +72,12 @@ namespace Quadriga
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonSelect_Click(object sender, EventArgs e)
+        {
+            owner.SelectGroup(groups.groupsID[listBox.SelectedIndex]);
+            owner.UnlockMenu();
         }
     }
 }

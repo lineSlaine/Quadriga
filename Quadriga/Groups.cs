@@ -86,6 +86,7 @@ namespace Quadriga
                 DocumentReference userReference = database.Collection("accounts").Document(userSnapshot.Id);
                 await userReference.UpdateAsync("groups", FieldValue.ArrayRemove(ID));
             }
+
         }
     }
 }

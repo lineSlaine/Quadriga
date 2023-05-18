@@ -37,6 +37,7 @@ namespace Quadriga
 
         public void Logout()
         {
+            lockMenu();
             logoPanel.Visible = false;
             menuPanel.Visible = false;
             CloseActiveForm();
@@ -59,19 +60,19 @@ namespace Quadriga
             activeForm.Close();
             activeForm = null;
         }
-        void UnlockMenu()
+        public void UnlockMenu()
         {
-            switch (LVL)
-            {
-                case 0:
-                    buttonGSettings.Enabled = true;
-                    break;
-                case 1 or 2:
-                    buttonTasks.Enabled = true;
-                    buttonReports.Enabled = true;
-                    break;
-
-            }
+            buttonGSettings.Enabled = true;
+            buttonTasks.Enabled = true;
+            buttonProjects.Enabled = true;
+            buttonLPeople.Enabled = true;
+        }
+        void lockMenu()
+        {
+            buttonGSettings.Enabled = false;
+            buttonTasks.Enabled = false;
+            buttonProjects.Enabled = false;
+            buttonLPeople.Enabled = false;
         }
         public void SetSelectedGroup(string groupID)
         {
@@ -266,8 +267,11 @@ namespace Quadriga
 
         private void ButtonSelectGroup_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
-            OpenChildForm(new GroupsForm(this, groups, authentication));
+            DisableButton();
+            currentButton = null;
+            OpenChildForm(new GroupsForm(this, groups,authentication));
+
+            
         }
     }
 }

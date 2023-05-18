@@ -36,6 +36,7 @@
             this.listBox = new System.Windows.Forms.ListBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonSelect = new System.Windows.Forms.Button();
             this.panelCreate.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -116,6 +117,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.buttonSelect);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -133,6 +135,22 @@
             this.label1.Size = new System.Drawing.Size(226, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Select your group";
+            // 
+            // buttonSelect
+            // 
+            this.buttonSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(90)))));
+            this.buttonSelect.FlatAppearance.BorderSize = 0;
+            this.buttonSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSelect.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSelect.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonSelect.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonSelect.Location = new System.Drawing.Point(272, 18);
+            this.buttonSelect.Name = "buttonSelect";
+            this.buttonSelect.Size = new System.Drawing.Size(256, 42);
+            this.buttonSelect.TabIndex = 9;
+            this.buttonSelect.Text = "Select";
+            this.buttonSelect.UseVisualStyleBackColor = false;
+            this.buttonSelect.Click += new System.EventHandler(this.buttonSelect_Click);
             // 
             // GroupsForm
             // 
@@ -164,5 +182,6 @@
         private Panel panel1;
         private ListBox listBox;
         private Panel panel3;
+        private Button buttonSelect;
     }
 }
