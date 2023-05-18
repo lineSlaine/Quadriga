@@ -23,12 +23,5 @@ namespace Quadriga
             this.authentication = authentication;
         }
 
-        private async void buttonAddGroup_Click(object sender, EventArgs e)
-        {
-            if(textGroupName.Text != "")
-            {
-                await groups.AddGroup("", authentication.firebaseAuthLink);
-            }
-        }
     }
 }

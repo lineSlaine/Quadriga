@@ -41,8 +41,8 @@ namespace Quadriga
                 }
                 else
                 {
-                    Dictionary<string, object> accountData = new Dictionary<string, object>
-                {
+                    Dictionary<string, object> accountData = new()
+                    {
                     {"email", email },
                     {"password", password },
                     {"lvl", 0 },
@@ -105,7 +105,7 @@ namespace Quadriga
                 if (snapshot.Exists)
                 {
                     Dictionary<string, object> userValues = snapshot.ToDictionary();
-                    object lvl; userValues.TryGetValue("lvl", out lvl);
+                    userValues.TryGetValue("lvl", out object lvl);
                     LVL = Convert.ToInt32(lvl);
                     ex = null;
                 }

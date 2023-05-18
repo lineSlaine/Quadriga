@@ -32,48 +32,41 @@ namespace Quadriga
 
         private async void ButtonEnter_Click(object sender, EventArgs e)
         {
-            if (checkRemember.Checked)
+            Clear();
+            buttonEnter.Enabled = false;
+            buttonEnter.BackColor = disableColor;
+            if (textUsername.Text.Trim() == "" || !email.IsMatch(textUsername.Text.ToLower()))
             {
 
+                if (labelIncorrectEmail.Visible == false) IncorrectEmailMessage();
+                if (labelIncorrectPass.Visible == true) IncorrectPasswordMessage();
+                if (labelError.Visible == true) IncorrectMessage();
+                buttonEnter.Enabled = true;
+                buttonEnter.BackColor = baseColor;
+            }
+            else if (textPassword.Text.Trim() == "" || textPassword.Text.Length < 8)
+            {
+                if (labelIncorrectPass.Visible == false) IncorrectPasswordMessage();
+                if (labelIncorrectEmail.Visible == true) IncorrectEmailMessage();
+                if (labelError.Visible == true) IncorrectMessage();
+                buttonEnter.Enabled = true;
+                buttonEnter.BackColor = baseColor;
             }
             else
             {
-                Clear();
-                buttonEnter.Enabled = false;
-                buttonEnter.BackColor = disableColor;
-                if (textUsername.Text.Trim() == "" || !email.IsMatch(textUsername.Text.ToLower()))
-                {
+                await LoginCheck();
 
-                    if (labelIncorrectEmail.Visible == false) IncorrectEmailMessage();
-                    if (labelIncorrectPass.Visible == true) IncorrectPasswordMessage();
-                    if (labelError.Visible == true) IncorrectMessage();
-                    buttonEnter.Enabled = true;
-                    buttonEnter.BackColor = baseColor;
-                }
-                else if (textPassword.Text.Trim() == "" || textPassword.Text.Length < 8)
+                if (authentication.authStatus)
                 {
-                    if (labelIncorrectPass.Visible == false) IncorrectPasswordMessage();
-                    if (labelIncorrectEmail.Visible == true) IncorrectEmailMessage();
-                    if (labelError.Visible == true) IncorrectMessage();
-                    buttonEnter.Enabled = true;
-                    buttonEnter.BackColor = baseColor;
+                    EnterLogin();
                 }
                 else
                 {
-                    await LoginCheck();
+                    Clear();
+                    IncorrectMessage();
 
-                    if (authentication.authStatus)
-                    {
-                        EnterLogin();
-                    }
-                    else
-                    {
-                        Clear();
-                        IncorrectMessage();
-
-                    }
                 }
-            }    
+            }
         }
 
         private void IncorrectPasswordMessage()

@@ -9,17 +9,17 @@ namespace Quadriga
 
         Form activeForm;
         Button currentButton;
+        string selectedGroup;
         readonly Color baseColor = Color.FromArgb(51, 51, 76);
         readonly Color selectColor = Color.FromArgb(65, 65, 90);
         public int LVL;
         Authentication authentication;
-        FirestoreDb database;
         Groups groups;
+        string selectedGroupID;
 
 
         public FormMain(FirestoreDb database)
         {
-            this.database = database;
             authentication = new Authentication(database);
             groups = new Groups(database);
             InitializeComponent();
@@ -58,6 +58,24 @@ namespace Quadriga
         {
             activeForm.Close();
             activeForm = null;
+        }
+        void UnlockMenu()
+        {
+            switch (LVL)
+            {
+                case 0:
+                    buttonGSettings.Enabled = true;
+                    break;
+                case 1 or 2:
+                    buttonTasks.Enabled = true;
+                    buttonReports.Enabled = true;
+                    break;
+
+            }
+        }
+        public void SetSelectedGroup(string groupID)
+        {
+            selectedGroupID = groupID;
         }
 
         public bool LoadLVL()
@@ -109,6 +127,11 @@ namespace Quadriga
             
         }
 
+        public void SelectGroup(string docID)
+        {
+            selectedGroup = docID;
+        }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -142,6 +165,7 @@ namespace Quadriga
             {
                 if(prevBtn.GetType() == typeof(Button))
                 {
+                    
                     prevBtn.BackColor = baseColor;
                     prevBtn.ForeColor = Color.Gainsboro;
                     prevBtn.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
@@ -238,6 +262,12 @@ namespace Quadriga
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void ButtonSelectGroup_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            OpenChildForm(new GroupsForm(this, groups, authentication));
         }
     }
 }

@@ -39,13 +39,14 @@
             this.buttonGSettings = new System.Windows.Forms.Button();
             this.buttonSettings = new System.Windows.Forms.Button();
             this.logoPanel = new System.Windows.Forms.Panel();
+            this.buttonSelectGroup = new System.Windows.Forms.Button();
+            this.panellogo = new System.Windows.Forms.Panel();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.buttonMin = new System.Windows.Forms.Button();
             this.buttonMax = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.labelTitle = new System.Windows.Forms.Label();
             this.panelActiveForm = new System.Windows.Forms.Panel();
-            this.panellogo = new System.Windows.Forms.Panel();
             this.menuPanel.SuspendLayout();
             this.logoPanel.SuspendLayout();
             this.panelTitle.SuspendLayout();
@@ -141,10 +142,25 @@
             // logoPanel
             // 
             this.logoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.logoPanel.Controls.Add(this.buttonSelectGroup);
             this.logoPanel.Controls.Add(this.panellogo);
             resources.ApplyResources(this.logoPanel, "logoPanel");
             this.logoPanel.Name = "logoPanel";
             this.logoPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LogoPanel_MouseDown);
+            // 
+            // buttonSelectGroup
+            // 
+            resources.ApplyResources(this.buttonSelectGroup, "buttonSelectGroup");
+            this.buttonSelectGroup.FlatAppearance.BorderSize = 0;
+            this.buttonSelectGroup.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonSelectGroup.Name = "buttonSelectGroup";
+            this.buttonSelectGroup.UseVisualStyleBackColor = true;
+            this.buttonSelectGroup.Click += new System.EventHandler(this.ButtonSelectGroup_Click);
+            // 
+            // panellogo
+            // 
+            resources.ApplyResources(this.panellogo, "panellogo");
+            this.panellogo.Name = "panellogo";
             // 
             // panelTitle
             // 
@@ -198,11 +214,6 @@
             resources.ApplyResources(this.panelActiveForm, "panelActiveForm");
             this.panelActiveForm.Name = "panelActiveForm";
             // 
-            // panellogo
-            // 
-            resources.ApplyResources(this.panellogo, "panellogo");
-            this.panellogo.Name = "panellogo";
-            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -234,11 +245,12 @@
         private Label labelTitle;
         private Button buttonTasks;
         private Button buttonMessages;
-        private Button buttonStatistics;
         private Button buttonProjects;
         private Button buttonReports;
         private Button buttonLPeople;
         private Panel panelActiveForm;
         private Panel panellogo;
+        private Button buttonSelectGroup;
+        private Button buttonStatistics;
     }
 }

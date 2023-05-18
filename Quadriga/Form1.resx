@@ -108,6 +108,9 @@
   <data name="buttonProjects.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
+  <data name="buttonProjects.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="buttonProjects.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -146,6 +149,9 @@
   </data>
   <data name="buttonReports.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
+  </data>
+  <data name="buttonReports.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="buttonReports.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -186,6 +192,9 @@
   <data name="buttonLPeople.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
+  <data name="buttonLPeople.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="buttonLPeople.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -224,6 +233,9 @@
   </data>
   <data name="buttonTasks.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
+  </data>
+  <data name="buttonTasks.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="buttonTasks.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -264,6 +276,9 @@
   <data name="buttonMessages.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
+  <data name="buttonMessages.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="buttonMessages.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -288,6 +303,9 @@
   <data name="buttonMessages.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
+  <data name="buttonMessages.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;buttonMessages.Name" xml:space="preserve">
     <value>buttonMessages</value>
   </data>
@@ -302,6 +320,9 @@
   </data>
   <data name="buttonGSettings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
+  </data>
+  <data name="buttonGSettings.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="buttonGSettings.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -372,34 +393,69 @@
   <data name="&gt;&gt;buttonSettings.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="buttonSelectGroup.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="buttonSelectGroup.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="buttonSelectGroup.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonSelectGroup.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12.25pt, style=Bold</value>
+  </data>
+  <data name="buttonSelectGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 0</value>
+  </data>
+  <data name="buttonSelectGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 66</value>
+  </data>
+  <data name="buttonSelectGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="buttonSelectGroup.Text" xml:space="preserve">
+    <value>Select Group</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectGroup.Name" xml:space="preserve">
+    <value>buttonSelectGroup</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectGroup.Parent" xml:space="preserve">
+    <value>logoPanel</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectGroup.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="panellogo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
-        AElFTkSuQmCC
+        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
 </value>
   </data>
   <data name="panellogo.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
@@ -427,7 +483,7 @@
     <value>logoPanel</value>
   </data>
   <data name="&gt;&gt;panellogo.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="logoPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>

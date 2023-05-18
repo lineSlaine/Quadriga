@@ -34,14 +34,14 @@
             // buttonDelete
             // 
             this.buttonDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.buttonDelete.BackColor = System.Drawing.Color.Maroon;
             this.buttonDelete.FlatAppearance.BorderSize = 0;
             this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDelete.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonDelete.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonDelete.Location = new System.Drawing.Point(12, 383);
+            this.buttonDelete.Location = new System.Drawing.Point(12, 406);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(256, 61);
+            this.buttonDelete.Size = new System.Drawing.Size(256, 38);
             this.buttonDelete.TabIndex = 5;
             this.buttonDelete.Text = "Delete account";
             this.buttonDelete.UseVisualStyleBackColor = false;
