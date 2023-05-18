@@ -9,13 +9,14 @@ namespace Quadriga
 
         Form activeForm;
         Button currentButton;
-        string selectedGroup;
+        
         readonly Color baseColor = Color.FromArgb(51, 51, 76);
         readonly Color selectColor = Color.FromArgb(65, 65, 90);
         public int LVL;
         Authentication authentication;
         Groups groups;
-        string selectedGroupID;
+        public string selectedGroupName; 
+        public string selectedGroup;
 
 
         public FormMain(FirestoreDb database)
@@ -37,7 +38,7 @@ namespace Quadriga
 
         public void Logout()
         {
-            lockMenu();
+            LockMenu();
             logoPanel.Visible = false;
             menuPanel.Visible = false;
             CloseActiveForm();
@@ -67,16 +68,12 @@ namespace Quadriga
             buttonProjects.Enabled = true;
             buttonLPeople.Enabled = true;
         }
-        void lockMenu()
+        public void LockMenu()
         {
             buttonGSettings.Enabled = false;
             buttonTasks.Enabled = false;
             buttonProjects.Enabled = false;
             buttonLPeople.Enabled = false;
-        }
-        public void SetSelectedGroup(string groupID)
-        {
-            selectedGroupID = groupID;
         }
 
         public bool LoadLVL()
@@ -128,9 +125,10 @@ namespace Quadriga
             
         }
 
-        public void SelectGroup(string docID)
+        public void SelectGroup(string docID, string groupName)
         {
             selectedGroup = docID;
+            selectedGroupName = groupName;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

@@ -38,6 +38,7 @@ namespace Quadriga
 
         public async Task GetGroupsNames()
         {
+            groupsNames = null;
             List<string> names = new List<string>();
 
             foreach(string ID in groupsID)
@@ -56,6 +57,7 @@ namespace Quadriga
 
         public async Task GetGroupsID(FirebaseAuth firebaseAuthLink)
         {
+            groupsID = null;
             DocumentReference userReference = database.Collection("accounts").Document(firebaseAuthLink.User.Email);
             DocumentSnapshot snapshot = await userReference.GetSnapshotAsync();
             if (snapshot.Exists)
@@ -79,9 +81,9 @@ namespace Quadriga
             DocumentReference docRef = database.Collection("groups").Document(ID);
             await docRef.DeleteAsync();
 
-            Query usersQuery = database.Collection("accounts").WhereEqualTo("groups", ID);
-            QuerySnapshot capitalQuerySnapshot = await usersQuery.GetSnapshotAsync();
-            foreach (DocumentSnapshot userSnapshot in capitalQuerySnapshot.Documents)
+            Query usersQuery = database.Collection("accounts");
+            QuerySnapshot QuerySnapshot = await usersQuery.GetSnapshotAsync();
+            foreach (DocumentSnapshot userSnapshot in QuerySnapshot.Documents)
             {
                 DocumentReference userReference = database.Collection("accounts").Document(userSnapshot.Id);
                 await userReference.UpdateAsync("groups", FieldValue.ArrayRemove(ID));

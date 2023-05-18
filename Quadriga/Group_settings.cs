@@ -23,5 +23,23 @@ namespace Quadriga
             this.authentication = authentication;
         }
 
+        private void buttonRename_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Group_settings_Load(object sender, EventArgs e)
+        {
+            labelGroupName.Text = owner.selectedGroupName;
+        }
+
+        private async void buttonDelete_Click(object sender, EventArgs e)
+        {
+            await groups.DeleteGroup(owner.selectedGroup);
+            owner.selectedGroup = null;
+            owner.selectedGroupName = null;
+            owner.LockMenu();
+            owner.CloseActiveForm();
+        }
     }
 }

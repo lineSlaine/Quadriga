@@ -28,8 +28,13 @@ namespace Quadriga
             if(owner.LVL == 0)
             {
                 panelCreate.Visible = true;
+                textGroupName.Visible = true;
             }
-            else panelCreate.Visible = false;
+            else 
+            {
+                textGroupName.Visible = false;
+                panelCreate.Visible = false;
+            }
 
             SetList();
         }
@@ -51,6 +56,7 @@ namespace Quadriga
                         listBox.Items.Add(name);
                     }
                 }
+                
                 
             }
             catch { }
@@ -76,8 +82,11 @@ namespace Quadriga
 
         private void buttonSelect_Click(object sender, EventArgs e)
         {
-            owner.SelectGroup(groups.groupsID[listBox.SelectedIndex]);
-            owner.UnlockMenu();
+            if(listBox.SelectedItems.Count != 0)
+            {
+                owner.SelectGroup(groups.groupsID[listBox.SelectedIndex], listBox.Items[listBox.SelectedIndex].ToString());
+                owner.UnlockMenu();
+            }
         }
     }
 }

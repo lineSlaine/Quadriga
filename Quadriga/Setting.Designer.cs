@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panelMenuSet = new System.Windows.Forms.Panel();
+            this.buttonLogOut = new System.Windows.Forms.Button();
             this.buttonProfile = new System.Windows.Forms.Button();
             this.panelActiveForm = new System.Windows.Forms.Panel();
-            this.buttonLogOut = new System.Windows.Forms.Button();
             this.panelMenuSet.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,32 +43,8 @@
             this.panelMenuSet.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenuSet.Location = new System.Drawing.Point(0, 0);
             this.panelMenuSet.Name = "panelMenuSet";
-            this.panelMenuSet.Size = new System.Drawing.Size(176, 495);
+            this.panelMenuSet.Size = new System.Drawing.Size(188, 495);
             this.panelMenuSet.TabIndex = 0;
-            // 
-            // buttonProfile
-            // 
-            this.buttonProfile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonProfile.FlatAppearance.BorderSize = 0;
-            this.buttonProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonProfile.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonProfile.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonProfile.Location = new System.Drawing.Point(0, 0);
-            this.buttonProfile.Name = "buttonProfile";
-            this.buttonProfile.Size = new System.Drawing.Size(176, 52);
-            this.buttonProfile.TabIndex = 1;
-            this.buttonProfile.Text = " Profile";
-            this.buttonProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonProfile.UseVisualStyleBackColor = true;
-            this.buttonProfile.Click += new System.EventHandler(this.buttonProfile_Click);
-            // 
-            // panelActiveForm
-            // 
-            this.panelActiveForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelActiveForm.Location = new System.Drawing.Point(176, 0);
-            this.panelActiveForm.Name = "panelActiveForm";
-            this.panelActiveForm.Size = new System.Drawing.Size(653, 495);
-            this.panelActiveForm.TabIndex = 1;
             // 
             // buttonLogOut
             // 
@@ -79,12 +55,36 @@
             this.buttonLogOut.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonLogOut.Location = new System.Drawing.Point(0, 443);
             this.buttonLogOut.Name = "buttonLogOut";
-            this.buttonLogOut.Size = new System.Drawing.Size(176, 52);
+            this.buttonLogOut.Size = new System.Drawing.Size(188, 52);
             this.buttonLogOut.TabIndex = 2;
             this.buttonLogOut.Text = " Log Out";
             this.buttonLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonLogOut.UseVisualStyleBackColor = true;
             this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
+            // 
+            // buttonProfile
+            // 
+            this.buttonProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonProfile.FlatAppearance.BorderSize = 0;
+            this.buttonProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonProfile.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonProfile.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonProfile.Location = new System.Drawing.Point(0, 0);
+            this.buttonProfile.Name = "buttonProfile";
+            this.buttonProfile.Size = new System.Drawing.Size(188, 52);
+            this.buttonProfile.TabIndex = 1;
+            this.buttonProfile.Text = " Profile";
+            this.buttonProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonProfile.UseVisualStyleBackColor = true;
+            this.buttonProfile.Click += new System.EventHandler(this.buttonProfile_Click);
+            // 
+            // panelActiveForm
+            // 
+            this.panelActiveForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelActiveForm.Location = new System.Drawing.Point(188, 0);
+            this.panelActiveForm.Name = "panelActiveForm";
+            this.panelActiveForm.Size = new System.Drawing.Size(641, 495);
+            this.panelActiveForm.TabIndex = 1;
             // 
             // Settings
             // 
