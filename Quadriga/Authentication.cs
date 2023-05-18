@@ -28,7 +28,7 @@ namespace Quadriga
             authStatus = false;
         }
 
-        public async Task RegistrationOwner(string email, string password, string firstname, string middlename, string lastname)
+        public async Task Registration(string email, string password, string firstname, string middlename, string lastname, string job, int lvl, List<string> list)
         {
             regStatus = false;
             try
@@ -45,12 +45,12 @@ namespace Quadriga
                     {
                     {"email", email },
                     {"password", password },
-                    {"lvl", 0 },
+                    {"lvl", lvl },
                     {"firstname", firstname },
                     { "middlename", middlename },
                     { "lastname", lastname },
-                    { "jobtitle", ""},
-                    { "groups", new List<string>()}
+                    { "jobtitle", job },
+                    { "groups", list}
 
                 };
                     await database.Collection("accounts").Document(email).SetAsync(accountData);
@@ -147,6 +147,13 @@ namespace Quadriga
             {
                 this.ex = ex.Message;
             }
+        }
+        public async Task AccCheck(string email)
+        {
+            ex = null;
+            DocumentReference reference = database.Collection("accounts").Document(email);
+            DocumentSnapshot snapshot = await reference.GetSnapshotAsync();
+            if (snapshot.Exists) { ex = "Done"; }
         }
 
         public void LogOut()

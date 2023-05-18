@@ -39,8 +39,8 @@ namespace Quadriga
             FirstnameCheck(); MiddlenameCheck(); LastnameCheck(); EmailCheck(); PasswordCheck();
             if(FirstnameCheck()&& MiddlenameCheck()&& LastnameCheck()&& EmailCheck()&& PasswordCheck())
             {
-                Task task = authentication.RegistrationOwner(textUsername.Text.Trim(), textPassword.Text, textFirstname.Text.Trim(), textMiddlename.Text.Trim(), textLastname.Text.Trim());
-                await task;
+                await authentication.Registration(textUsername.Text.Trim(), textPassword.Text, textFirstname.Text.Trim(), textMiddlename.Text.Trim(), textLastname.Text.Trim(),"", 0, new List<string>());
+                
                 if (authentication.regStatus)
                 {
                     
@@ -115,7 +115,7 @@ namespace Quadriga
         }
         private bool EmailCheck()
         {
-            if (textUsername.Text.Trim() == "" || !email.IsMatch(textUsername.Text.ToLower()))
+            if (textUsername.Text.Trim() == "" || !email.IsMatch(textUsername.Text.ToLower().Trim()))
             {
                 labelIncorrectEmail.Visible = true;
                 return false;

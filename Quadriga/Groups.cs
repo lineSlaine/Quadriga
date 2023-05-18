@@ -90,5 +90,20 @@ namespace Quadriga
             }
 
         }
+        public async Task RenameGroup(string ID, string name)
+        {
+            DocumentReference docRef = database.Collection("groups").Document(ID);
+            Dictionary<string, object> parameters = new Dictionary<string, object>()
+            {
+                {"groupname", name}
+            };
+            await docRef.UpdateAsync(parameters);
+        }
+
+        public async Task AddNewUser(string ID, string email)
+        {
+            DocumentReference reference = database.Collection("accounts").Document(email);
+            await reference.UpdateAsync("groups", FieldValue.ArrayUnion(ID));
+        }
     }
 }

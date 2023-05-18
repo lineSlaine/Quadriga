@@ -59,7 +59,7 @@
             this.buttonAddGroup.TabIndex = 8;
             this.buttonAddGroup.Text = "Create new group";
             this.buttonAddGroup.UseVisualStyleBackColor = false;
-            this.buttonAddGroup.Click += new System.EventHandler(this.buttonAddGroup_Click);
+            this.buttonAddGroup.Click += new System.EventHandler(this.ButtonAddGroup_Click);
             // 
             // panel2
             // 
@@ -97,7 +97,7 @@
             this.buttonSelect.TabIndex = 9;
             this.buttonSelect.Text = "Select";
             this.buttonSelect.UseVisualStyleBackColor = false;
-            this.buttonSelect.Click += new System.EventHandler(this.buttonSelect_Click);
+            this.buttonSelect.Click += new System.EventHandler(this.ButtonSelect_Click);
             // 
             // label1
             // 

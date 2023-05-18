@@ -62,7 +62,7 @@ namespace Quadriga
             catch { }
             
         }
-        private async void buttonAddGroup_Click(object sender, EventArgs e)
+        private async void ButtonAddGroup_Click(object sender, EventArgs e)
         {
             buttonAddGroup.Enabled = false;
             buttonAddGroup.BackColor = Color.Silver;
@@ -75,12 +75,12 @@ namespace Quadriga
             buttonAddGroup.BackColor = Color.FromArgb(51, 51, 76);
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void buttonSelect_Click(object sender, EventArgs e)
+        private void ButtonSelect_Click(object sender, EventArgs e)
         {
             if(listBox.SelectedItems.Count != 0)
             {

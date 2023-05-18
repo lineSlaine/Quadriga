@@ -30,14 +30,14 @@
         {
             this.buttonDelete = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panelActive = new System.Windows.Forms.Panel();
+            this.panelActiveForm = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonAddUser = new System.Windows.Forms.Button();
-            this.buttonDeleteUser = new System.Windows.Forms.Button();
+            this.buttonAddNewUser = new System.Windows.Forms.Button();
             this.buttonRename = new System.Windows.Forms.Button();
             this.labelGroupName = new System.Windows.Forms.Label();
+            this.buttonAddUser = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -62,7 +62,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panelActive);
+            this.panel2.Controls.Add(this.panelActiveForm);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -70,13 +70,13 @@
             this.panel2.Size = new System.Drawing.Size(813, 456);
             this.panel2.TabIndex = 3;
             // 
-            // panelActive
+            // panelActiveForm
             // 
-            this.panelActive.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelActive.Location = new System.Drawing.Point(188, 0);
-            this.panelActive.Name = "panelActive";
-            this.panelActive.Size = new System.Drawing.Size(625, 456);
-            this.panelActive.TabIndex = 9;
+            this.panelActiveForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelActiveForm.Location = new System.Drawing.Point(188, 0);
+            this.panelActiveForm.Name = "panelActiveForm";
+            this.panelActiveForm.Size = new System.Drawing.Size(625, 456);
+            this.panelActiveForm.TabIndex = 9;
             // 
             // panel4
             // 
@@ -102,7 +102,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.buttonAddUser);
-            this.panel1.Controls.Add(this.buttonDeleteUser);
+            this.panel1.Controls.Add(this.buttonAddNewUser);
             this.panel1.Controls.Add(this.buttonRename);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 71);
@@ -110,35 +110,21 @@
             this.panel1.Size = new System.Drawing.Size(188, 151);
             this.panel1.TabIndex = 9;
             // 
-            // buttonAddUser
+            // buttonAddNewUser
             // 
-            this.buttonAddUser.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonAddUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.buttonAddUser.FlatAppearance.BorderSize = 0;
-            this.buttonAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAddUser.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonAddUser.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonAddUser.Location = new System.Drawing.Point(12, 7);
-            this.buttonAddUser.Name = "buttonAddUser";
-            this.buttonAddUser.Size = new System.Drawing.Size(160, 41);
-            this.buttonAddUser.TabIndex = 6;
-            this.buttonAddUser.Text = "Add new user";
-            this.buttonAddUser.UseVisualStyleBackColor = false;
-            // 
-            // buttonDeleteUser
-            // 
-            this.buttonDeleteUser.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonDeleteUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.buttonDeleteUser.FlatAppearance.BorderSize = 0;
-            this.buttonDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDeleteUser.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonDeleteUser.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonDeleteUser.Location = new System.Drawing.Point(12, 54);
-            this.buttonDeleteUser.Name = "buttonDeleteUser";
-            this.buttonDeleteUser.Size = new System.Drawing.Size(160, 41);
-            this.buttonDeleteUser.TabIndex = 7;
-            this.buttonDeleteUser.Text = "Delete user";
-            this.buttonDeleteUser.UseVisualStyleBackColor = false;
+            this.buttonAddNewUser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonAddNewUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.buttonAddNewUser.FlatAppearance.BorderSize = 0;
+            this.buttonAddNewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddNewUser.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonAddNewUser.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonAddNewUser.Location = new System.Drawing.Point(12, 7);
+            this.buttonAddNewUser.Name = "buttonAddNewUser";
+            this.buttonAddNewUser.Size = new System.Drawing.Size(160, 41);
+            this.buttonAddNewUser.TabIndex = 6;
+            this.buttonAddNewUser.Text = "Add new user";
+            this.buttonAddNewUser.UseVisualStyleBackColor = false;
+            this.buttonAddNewUser.Click += new System.EventHandler(this.buttonAddUser_Click);
             // 
             // buttonRename
             // 
@@ -169,6 +155,22 @@
             this.labelGroupName.Text = "group name";
             this.labelGroupName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // buttonAddUser
+            // 
+            this.buttonAddUser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonAddUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.buttonAddUser.FlatAppearance.BorderSize = 0;
+            this.buttonAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddUser.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonAddUser.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonAddUser.Location = new System.Drawing.Point(12, 54);
+            this.buttonAddUser.Name = "buttonAddUser";
+            this.buttonAddUser.Size = new System.Drawing.Size(160, 41);
+            this.buttonAddUser.TabIndex = 8;
+            this.buttonAddUser.Text = "Add user";
+            this.buttonAddUser.UseVisualStyleBackColor = false;
+            this.buttonAddUser.Click += new System.EventHandler(this.buttonAddUser_Click_1);
+            // 
             // Group_settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -189,13 +191,13 @@
         #endregion
         private Button buttonDelete;
         private Panel panel2;
-        private Panel panelActive;
+        private Panel panelActiveForm;
         private Panel panel4;
-        private Button buttonAddUser;
-        private Button buttonDeleteUser;
+        private Button buttonAddNewUser;
         private Button buttonRename;
         private Label labelGroupName;
         private Panel panel3;
         private Panel panel1;
+        private Button buttonAddUser;
     }
 }
