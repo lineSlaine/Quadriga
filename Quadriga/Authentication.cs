@@ -2,6 +2,9 @@
 using Firebase.Auth;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Security.Cryptography.X509Certificates;
+using System.Diagnostics.Metrics;
+using System.Text.RegularExpressions;
+using System.Collections;
 
 namespace Quadriga
 {
@@ -119,6 +122,7 @@ namespace Quadriga
 
         public async Task DeleteAccount()
         {
+            ex = null;
             try
             {
                 DocumentReference reference = database.Collection("accounts").Document(firebaseAuthLink.User.Email);
@@ -127,8 +131,15 @@ namespace Quadriga
                 {
                     Dictionary<string, object> userValues = snapshot.ToDictionary();
                     userValues.TryGetValue("groups", out object groups);
+                    IEnumerable enumerable = groups as IEnumerable;
+                    if (enumerable != null)
                     {
-                        if (groups == null)
+                        List<string> groupsIDlist = new List<string>();
+                        foreach (object element in enumerable)
+                        {
+                            groupsIDlist.Add(element.ToString());
+                        }
+                        if (groupsIDlist.Count == 0)
                         {
                             await reference.DeleteAsync();
                             await provider.DeleteUserAsync(firebaseAuthLink.FirebaseToken);
@@ -140,6 +151,7 @@ namespace Quadriga
                             ex = "Delete all your groups before deleting your account";
                         }
                     }
+                    else ex = "Error";
                 }
 
             }
