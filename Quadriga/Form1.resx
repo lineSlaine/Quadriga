@@ -108,9 +108,6 @@
   <data name="buttonProjects.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="buttonProjects.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="buttonProjects.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -176,6 +173,9 @@
   </data>
   <data name="buttonReports.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
+  </data>
+  <data name="buttonReports.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;buttonReports.Name" xml:space="preserve">
     <value>buttonReports</value>
@@ -432,7 +432,7 @@
   <data name="panellogo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAD
-        4AAAA+ABkfFaDgAABXpJREFUeF7tnN1x20AMhFNOikkF6SCPqSJNuYS8ph5nFzhozgwkmTJlXmZ3Z76x
+        3gAAA94B7kQnrgAABXpJREFUeF7tnN1x20AMhFNOikkF6SCPqSJNuYS8ph5nFzhozgwkmTJlXmZ3Z76x
         DFGnJbD8kZzJl28/fhph2qLRoS0aHdqi0aEtGh3aotGhLRod2qLRoS0aHdqi0aEtGh3aotGhLRod2uI9
         Xl9fX8Bvsxwv3bxu0RbvgTf6A6z19Keb1y3a4j34Rvl+1mI6LQC8JJhzmHVKAHZfd8xxsP85hpADoAb7
         n2MIOQBqsP85hpADoAb7n2MIOQBqsP85hpADoAb7n2MIOQBqsP85hpADoAb7n2MIOQBqsP85hpADoAb7

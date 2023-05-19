@@ -32,7 +32,7 @@
             this.panelDelete = new System.Windows.Forms.Panel();
             this.buttonDeleteProject = new System.Windows.Forms.Button();
             this.panelOptions = new System.Windows.Forms.Panel();
-            this.buttonDeleteGroup = new System.Windows.Forms.Button();
+            this.buttonRename = new System.Windows.Forms.Button();
             this.buttonAddGroup = new System.Windows.Forms.Button();
             this.buttonGroupList = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -70,7 +70,7 @@
             // 
             // buttonDeleteProject
             // 
-            this.buttonDeleteProject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.buttonDeleteProject.BackColor = System.Drawing.Color.Maroon;
             this.buttonDeleteProject.FlatAppearance.BorderSize = 0;
             this.buttonDeleteProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDeleteProject.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -82,35 +82,37 @@
             this.buttonDeleteProject.TabIndex = 15;
             this.buttonDeleteProject.Text = "Delete Project";
             this.buttonDeleteProject.UseVisualStyleBackColor = false;
+            this.buttonDeleteProject.Click += new System.EventHandler(this.buttonDeleteProject_Click);
             // 
             // panelOptions
             // 
-            this.panelOptions.Controls.Add(this.buttonDeleteGroup);
+            this.panelOptions.Controls.Add(this.buttonRename);
             this.panelOptions.Controls.Add(this.buttonAddGroup);
             this.panelOptions.Controls.Add(this.buttonGroupList);
             this.panelOptions.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelOptions.Enabled = false;
             this.panelOptions.Location = new System.Drawing.Point(0, 169);
             this.panelOptions.Name = "panelOptions";
-            this.panelOptions.Size = new System.Drawing.Size(188, 151);
+            this.panelOptions.Size = new System.Drawing.Size(188, 142);
             this.panelOptions.TabIndex = 11;
             this.panelOptions.Visible = false;
             // 
-            // buttonDeleteGroup
+            // buttonRename
             // 
-            this.buttonDeleteGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.buttonDeleteGroup.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonDeleteGroup.FlatAppearance.BorderSize = 0;
-            this.buttonDeleteGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDeleteGroup.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonDeleteGroup.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonDeleteGroup.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonDeleteGroup.Location = new System.Drawing.Point(0, 84);
-            this.buttonDeleteGroup.Name = "buttonDeleteGroup";
-            this.buttonDeleteGroup.Size = new System.Drawing.Size(188, 42);
-            this.buttonDeleteGroup.TabIndex = 14;
-            this.buttonDeleteGroup.Text = "Delete Group";
-            this.buttonDeleteGroup.UseVisualStyleBackColor = false;
+            this.buttonRename.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.buttonRename.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonRename.FlatAppearance.BorderSize = 0;
+            this.buttonRename.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRename.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonRename.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonRename.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonRename.Location = new System.Drawing.Point(0, 84);
+            this.buttonRename.Name = "buttonRename";
+            this.buttonRename.Size = new System.Drawing.Size(188, 42);
+            this.buttonRename.TabIndex = 14;
+            this.buttonRename.Text = "Rename project";
+            this.buttonRename.UseVisualStyleBackColor = false;
+            this.buttonRename.Click += new System.EventHandler(this.buttonRename_Click);
             // 
             // buttonAddGroup
             // 
@@ -127,6 +129,7 @@
             this.buttonAddGroup.TabIndex = 13;
             this.buttonAddGroup.Text = "Add Group";
             this.buttonAddGroup.UseVisualStyleBackColor = false;
+            this.buttonAddGroup.Click += new System.EventHandler(this.buttonAddGroup_Click);
             // 
             // buttonGroupList
             // 
@@ -143,6 +146,7 @@
             this.buttonGroupList.TabIndex = 12;
             this.buttonGroupList.Text = "Group List";
             this.buttonGroupList.UseVisualStyleBackColor = false;
+            this.buttonGroupList.Click += new System.EventHandler(this.buttonGroupList_Click);
             // 
             // panel2
             // 
@@ -219,6 +223,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Projects";
             this.Text = "PROJECT";
+            this.Load += new System.EventHandler(this.Projects_Load);
             this.panel1.ResumeLayout(false);
             this.panelDelete.ResumeLayout(false);
             this.panelOptions.ResumeLayout(false);
@@ -234,12 +239,12 @@
         private Panel panelDelete;
         private Button buttonDeleteProject;
         private Panel panelOptions;
-        private Button buttonDeleteGroup;
         private Button buttonAddGroup;
         private Button buttonGroupList;
         private Panel panel2;
         private Button buttonSelectProject;
         private Button buttonCreateProject;
         private Panel panelActiveForm;
+        private Button buttonRename;
     }
 }

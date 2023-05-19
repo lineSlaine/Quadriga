@@ -65,14 +65,12 @@ namespace Quadriga
         {
             buttonGSettings.Enabled = true;
             buttonTasks.Enabled = true;
-            buttonProjects.Enabled = true;
             buttonLPeople.Enabled = true;
         }
         public void LockMenu()
         {
             buttonGSettings.Enabled = false;
             buttonTasks.Enabled = false;
-            buttonProjects.Enabled = false;
             buttonLPeople.Enabled = false;
         }
 
@@ -84,8 +82,8 @@ namespace Quadriga
                     buttonTasks.Enabled = false;
                     buttonTasks.Visible = false;
 
-                    buttonReports.Enabled = false;
-                    buttonReports.Visible = false;
+                    //buttonReports.Enabled = false;
+                    //buttonReports.Visible = false;
                     LoadMEnu();
                     break;
                 case 1:

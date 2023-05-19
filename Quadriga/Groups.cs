@@ -51,13 +51,14 @@ namespace Quadriga
                     groupValues.TryGetValue("groupname", out object name);
                     names.Add(name.ToString());
                 }
-                groupsNames = names;
             }
+            groupsNames = names;
         }
 
         public async Task GetGroupsID(FirebaseAuth firebaseAuthLink)
         {
             groupsID = null;
+            List<string> groupsIDlist = new List<string>();
             DocumentReference userReference = database.Collection("accounts").Document(firebaseAuthLink.User.Email);
             DocumentSnapshot snapshot = await userReference.GetSnapshotAsync();
             if (snapshot.Exists)
@@ -67,14 +68,13 @@ namespace Quadriga
                 IEnumerable enumerable = groupID as IEnumerable;
                 if (enumerable != null)
                 {
-                    List<string> groupsIDlist = new List<string>();
                     foreach (object element in enumerable)
                     {
                         groupsIDlist.Add(element.ToString());
                     }
-                    groupsID = groupsIDlist;
                 }
             }
+            groupsID = groupsIDlist;
         }
         public async Task DeleteGroup(string ID)
         {

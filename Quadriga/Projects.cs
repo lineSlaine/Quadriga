@@ -44,8 +44,9 @@ namespace Quadriga
                     buttonAddGroup.Enabled = false;
                     buttonAddGroup.Visible = false;
 
-                    buttonDeleteGroup.Enabled = false;
-                    buttonDeleteGroup.Visible = false;
+                    buttonRename.Enabled = false;
+                    buttonRename.Visible = false;
+
                     break;
                 case 1:
                     buttonCreateProject.Enabled = false;
@@ -53,6 +54,9 @@ namespace Quadriga
 
                     buttonDeleteProject.Enabled = false;
                     buttonDeleteProject.Visible = false;
+
+                    buttonRename.Enabled = false;
+                    buttonRename.Visible = false;
                     break;
 
             }
@@ -76,18 +80,37 @@ namespace Quadriga
 
         void StateSwitch()
         {
-            if(projectID == null && owner.LVL != 0)
+            if(projectID != null)
             {
-                panelDelete.Visible = false;
-                panelOptions.Visible = false;
-                labelProjectName.Visible = false;
+                labelProjectName.Visible = true;
+                if(owner.LVL == 0)
+                {
+                    panelOptions.Visible = true;
+                    panelOptions.Enabled = true;
+
+                    panelDelete.Visible = true;
+                    panelDelete.Enabled = true;
+                }
+                else
+                {
+                    panelOptions.Visible = true;
+                    panelOptions.Enabled = true;
+                }
             }
             else
             {
-                panelDelete.Visible = true;
-                panelOptions.Visible = true;
-                labelProjectName.Visible = true;
+                labelProjectName.Visible = false;
+                panelOptions.Visible = false;
+                panelOptions.Enabled = false;
+                panelDelete.Visible = false;
+                panelDelete.Enabled = false;
             }
+        }
+
+        public void Select()
+        {
+            labelProjectName.Text = projectName;
+            StateSwitch();
         }
 
         private void buttonCreateGroup_Click(object sender, EventArgs e)
@@ -97,7 +120,37 @@ namespace Quadriga
 
         private void buttonSelectProject_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new ProjectSelect(this, authentication));
+        }
 
+        private void Projects_Load(object sender, EventArgs e)
+        {
+            load(owner.LVL);
+            StateSwitch();
+        }
+
+        private void buttonGroupList_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ProjectGroupList(this, authentication));
+        }
+
+        private void buttonAddGroup_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ProjectAddGroup(this, authentication));
+        }
+
+        private void buttonRename_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ProjectRename(authentication, this));
+        }
+
+        private async void buttonDeleteProject_Click(object sender, EventArgs e)
+        {
+            await projectHelper.DeleteProject(projectID, database);
+            projectID = null;
+            projectName = null;
+            StateSwitch();
+            activeForm.Close();
         }
     }
 }

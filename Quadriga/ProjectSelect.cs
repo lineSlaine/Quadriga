@@ -28,19 +28,19 @@ namespace Quadriga
             if (listBox.SelectedItems.Count != 0)
             {
                 owner.projectID = projectHelper.projectsID[listBox.SelectedIndex]; 
-                owner.projectName = listBox.Items[listBox.SelectedIndex].ToString());
+                owner.projectName = listBox.Items[listBox.SelectedIndex].ToString();
+                owner.Select();
             }
         }
 
         private void ProjectSelect_Load(object sender, EventArgs e)
         {
-            
-            
+            ReloadList();
         }
 
         private async Task ReloadList()
         {
-            listBox = null;
+            listBox.Items.Clear();
             await projectHelper.GetProjectIDList(authentication, authentication.database);
             await projectHelper.GetProjectNames(authentication.database);
 
