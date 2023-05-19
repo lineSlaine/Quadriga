@@ -196,7 +196,7 @@ namespace Quadriga
         private void ButtonProjects_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            //OpenChildForm(Form childForm);
+            OpenChildForm(new Projects(this, groups, authentication));
         }
 
 

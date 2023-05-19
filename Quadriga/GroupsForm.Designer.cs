@@ -30,19 +30,19 @@
         {
             this.buttonAddGroup = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.buttonSelect = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelCreate = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.textGroupName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.listBox = new System.Windows.Forms.ListBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textGroupName = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonSelect = new System.Windows.Forms.Button();
+            this.panelCreate = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panelCreate.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panelCreate.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonAddGroup
@@ -71,75 +71,6 @@
             this.panel2.Size = new System.Drawing.Size(800, 450);
             this.panel2.TabIndex = 1;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(90)))));
-            this.panel3.Controls.Add(this.textGroupName);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.panelCreate);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(188, 450);
-            this.panel3.TabIndex = 2;
-            // 
-            // buttonSelect
-            // 
-            this.buttonSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.buttonSelect.FlatAppearance.BorderSize = 0;
-            this.buttonSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSelect.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonSelect.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonSelect.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonSelect.Location = new System.Drawing.Point(12, 45);
-            this.buttonSelect.Name = "buttonSelect";
-            this.buttonSelect.Size = new System.Drawing.Size(166, 42);
-            this.buttonSelect.TabIndex = 9;
-            this.buttonSelect.Text = "Select";
-            this.buttonSelect.UseVisualStyleBackColor = false;
-            this.buttonSelect.Click += new System.EventHandler(this.ButtonSelect_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(14, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Select your group";
-            // 
-            // panelCreate
-            // 
-            this.panelCreate.Controls.Add(this.buttonAddGroup);
-            this.panelCreate.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelCreate.Location = new System.Drawing.Point(0, 385);
-            this.panelCreate.Name = "panelCreate";
-            this.panelCreate.Size = new System.Drawing.Size(188, 65);
-            this.panelCreate.TabIndex = 10;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Controls.Add(this.buttonSelect);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(188, 100);
-            this.panel5.TabIndex = 11;
-            // 
-            // textGroupName
-            // 
-            this.textGroupName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textGroupName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textGroupName.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textGroupName.Location = new System.Drawing.Point(0, 362);
-            this.textGroupName.Name = "textGroupName";
-            this.textGroupName.PlaceholderText = "  Group name";
-            this.textGroupName.Size = new System.Drawing.Size(188, 23);
-            this.textGroupName.TabIndex = 9;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.listBox);
@@ -167,6 +98,76 @@
             this.listBox.Name = "listBox";
             this.listBox.Size = new System.Drawing.Size(612, 450);
             this.listBox.TabIndex = 0;
+            this.listBox.SelectedIndexChanged += new System.EventHandler(this.listBox_SelectedIndexChanged);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(90)))));
+            this.panel3.Controls.Add(this.textGroupName);
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.panelCreate);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(188, 450);
+            this.panel3.TabIndex = 2;
+            // 
+            // textGroupName
+            // 
+            this.textGroupName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textGroupName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textGroupName.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textGroupName.Location = new System.Drawing.Point(0, 362);
+            this.textGroupName.Name = "textGroupName";
+            this.textGroupName.PlaceholderText = "  Group name";
+            this.textGroupName.Size = new System.Drawing.Size(188, 23);
+            this.textGroupName.TabIndex = 9;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.buttonSelect);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(188, 100);
+            this.panel5.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(14, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(161, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Select your group";
+            // 
+            // buttonSelect
+            // 
+            this.buttonSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.buttonSelect.FlatAppearance.BorderSize = 0;
+            this.buttonSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSelect.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSelect.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonSelect.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonSelect.Location = new System.Drawing.Point(12, 45);
+            this.buttonSelect.Name = "buttonSelect";
+            this.buttonSelect.Size = new System.Drawing.Size(166, 42);
+            this.buttonSelect.TabIndex = 9;
+            this.buttonSelect.Text = "Select";
+            this.buttonSelect.UseVisualStyleBackColor = false;
+            this.buttonSelect.Click += new System.EventHandler(this.ButtonSelect_Click);
+            // 
+            // panelCreate
+            // 
+            this.panelCreate.Controls.Add(this.buttonAddGroup);
+            this.panelCreate.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelCreate.Location = new System.Drawing.Point(0, 385);
+            this.panelCreate.Name = "panelCreate";
+            this.panelCreate.Size = new System.Drawing.Size(188, 65);
+            this.panelCreate.TabIndex = 10;
             // 
             // GroupsForm
             // 
@@ -177,12 +178,12 @@
             this.Text = "SELECT GROUP";
             this.Load += new System.EventHandler(this.GroupsForm_Load);
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panelCreate.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.panelCreate.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

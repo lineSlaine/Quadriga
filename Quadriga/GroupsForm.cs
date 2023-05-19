@@ -88,5 +88,10 @@ namespace Quadriga
                 owner.UnlockMenu();
             }
         }
+
+        private void listBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
