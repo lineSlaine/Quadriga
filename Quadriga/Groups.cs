@@ -105,5 +105,10 @@ namespace Quadriga
             DocumentReference reference = database.Collection("accounts").Document(email);
             await reference.UpdateAsync("groups", FieldValue.ArrayUnion(ID));
         }
+        public async Task RemoveUser(string ID, string email)
+        {
+            DocumentReference reference = database.Collection("accounts").Document(email);
+            await reference.UpdateAsync("groups", FieldValue.ArrayRemove(ID));
+        }
     }
 }

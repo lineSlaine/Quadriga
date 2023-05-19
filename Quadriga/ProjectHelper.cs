@@ -20,6 +20,7 @@ namespace Quadriga
         public List<string> currentGroups;
         public List<string> currentGroupsID;
 
+
         public ProjectHelper()
         {
             projectsID = new List<string>();
@@ -113,48 +114,17 @@ namespace Quadriga
         {
             currentGroups.Clear();
             currentGroupsID.Clear();
-            Query projectsQuery = authentication.database.Collection("groups");
-            QuerySnapshot QuerySnapshot = await projectsQuery.GetSnapshotAsync();
-            foreach (DocumentSnapshot projectsSnapshot in QuerySnapshot.Documents)
-            {
-                DocumentReference groupRef = authentication.database.Collection("groups").Document(projectsSnapshot.Id);
-                DocumentSnapshot snapshot = await groupRef.GetSnapshotAsync();
-                if (snapshot.Exists)
-                {
-                    Dictionary<string, object> groupValues = snapshot.ToDictionary();
-                    groupValues.TryGetValue("projectid", out object projectid);
-                    IEnumerable enumerable = projectid as IEnumerable;
-                    if (enumerable != null)
-                    {
-                        foreach (object element in enumerable)
-                        {
-                            if (element.ToString() == projectId)
-                            {
-                                currentGroupsID.Add(groupRef.Id);
-                            }
-                        }
-                    }
-                }
+            Groups group = new Groups(authentication.database);
 
-            }
-            Groups groups = new Groups(authentication.database);
-            groups.groupsID = currentGroupsID;
-            await groups.GetGroupsNames();
-            currentGroups = groups.groupsNames;
-        }
-        public async Task GetGroupsOutProject(string projectId, Authentication authentication)
-        {
-            currentGroups.Clear();
-            currentGroupsID.Clear();
-            Query projectsQuery = authentication.database.Collection("groups");
-            QuerySnapshot QuerySnapshot = await projectsQuery.GetSnapshotAsync();
-            foreach (DocumentSnapshot projectsSnapshot in QuerySnapshot.Documents)
+            await group.GetGroupsID(authentication.firebaseAuthLink);
+
+            foreach (string groupID in group.groupsID)
             {
-                DocumentReference groupRef = authentication.database.Collection("groups").Document(projectsSnapshot.Id);
-                DocumentSnapshot snapshot = await groupRef.GetSnapshotAsync();
-                if (snapshot.Exists)
+                DocumentReference docRef = authentication.database.Collection("groups").Document(groupID);
+                DocumentSnapshot snap = await docRef.GetSnapshotAsync();
+                if (snap.Exists)
                 {
-                    Dictionary<string, object> groupValues = snapshot.ToDictionary();
+                    Dictionary<string, object> groupValues = snap.ToDictionary();
                     groupValues.TryGetValue("projectid", out object projectid);
                     IEnumerable enumerable = projectid as IEnumerable;
                     if (enumerable != null)
@@ -168,15 +138,51 @@ namespace Quadriga
                                 break;
                             }
                         }
-                        if (!search) currentGroupsID.Add(groupRef.Id); 
+                        if (search) currentGroupsID.Add(groupID);
                     }
                 }
-
             }
-            Groups groups = new Groups(authentication.database);
-            groups.groupsID = currentGroupsID;
-            await groups.GetGroupsNames();
-            currentGroups = groups.groupsNames;
+            group.groupsID = currentGroupsID;
+            await group.GetGroupsNames();
+            currentGroups = group.groupsNames;
+        }
+        public async Task GetGroupsOutProject(string projectId, Authentication authentication)
+        {
+            currentGroups.Clear();
+            currentGroupsID.Clear();
+
+            Groups group = new Groups(authentication.database);
+
+            await group.GetGroupsID(authentication.firebaseAuthLink);
+
+            foreach(string groupID in group.groupsID)
+            {
+                DocumentReference docRef = authentication.database.Collection("groups").Document(groupID);
+                DocumentSnapshot snap = await docRef.GetSnapshotAsync();
+                if (snap.Exists)
+                {
+                    Dictionary<string, object> groupValues = snap.ToDictionary();
+                    groupValues.TryGetValue("projectid", out object projectid);
+                    IEnumerable enumerable = projectid as IEnumerable;
+                    if (enumerable != null)
+                    {
+                        bool search = false;
+                        foreach (object element in enumerable)
+                        {
+                            if (element.ToString() == projectId)
+                            {
+                                search = true;
+                                break;
+                            }
+                        }
+                        if (!search) currentGroupsID.Add(groupID);
+                    }
+                }
+            }
+            group.groupsID = currentGroupsID;
+            await group.GetGroupsNames();
+            currentGroups = group.groupsNames;
+
         }
     }
 }

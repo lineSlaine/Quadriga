@@ -181,7 +181,7 @@ namespace Quadriga
         private void ButtonLPeople_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            //OpenChildForm(Form childForm);
+            OpenChildForm(new ListOfPeople(this, authentication));
         }
 
 

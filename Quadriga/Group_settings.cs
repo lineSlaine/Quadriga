@@ -67,7 +67,8 @@ namespace Quadriga
         }
         private void buttonAddUser_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new AddNewUser(this, authentication));
+            Authentication a = new Authentication(authentication.database);
+            OpenChildForm(new AddNewUser(this, a));
         }
 
         private void buttonAddUser_Click_1(object sender, EventArgs e)
