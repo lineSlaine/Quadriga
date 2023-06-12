@@ -16,7 +16,7 @@ namespace Quadriga
     {
         FirestoreDb database;
         public List<string> groupsNames;
-        public List<String> groupsID;
+        public List<string> groupsID;
         public Groups(FirestoreDb database)
         {
             this.database = database;
