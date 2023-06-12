@@ -54,7 +54,7 @@ namespace Quadriga
                 logoPanel.Visible = true;
                 menuPanel.Visible = true;
                 CloseActiveForm();
-                labelTitle.Text = "HOME";
+                labelTitle.Text = "√À¿¬Õ¿ﬂ";
         }
         public void CloseActiveForm()
         {

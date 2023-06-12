@@ -53,9 +53,9 @@
             this.buttonSelect.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonSelect.Location = new System.Drawing.Point(12, 6);
             this.buttonSelect.Name = "buttonSelect";
-            this.buttonSelect.Size = new System.Drawing.Size(166, 42);
+            this.buttonSelect.Size = new System.Drawing.Size(180, 42);
             this.buttonSelect.TabIndex = 10;
-            this.buttonSelect.Text = "Select Group";
+            this.buttonSelect.Text = "Выбрать группу";
             this.buttonSelect.UseVisualStyleBackColor = false;
             this.buttonSelect.Click += new System.EventHandler(this.buttonSelect_Click);
             // 

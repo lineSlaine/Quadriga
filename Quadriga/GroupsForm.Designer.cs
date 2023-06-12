@@ -53,11 +53,11 @@
             this.buttonAddGroup.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonAddGroup.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonAddGroup.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonAddGroup.Location = new System.Drawing.Point(12, 11);
+            this.buttonAddGroup.Location = new System.Drawing.Point(12, 6);
             this.buttonAddGroup.Name = "buttonAddGroup";
-            this.buttonAddGroup.Size = new System.Drawing.Size(166, 42);
+            this.buttonAddGroup.Size = new System.Drawing.Size(166, 70);
             this.buttonAddGroup.TabIndex = 8;
-            this.buttonAddGroup.Text = "Create new group";
+            this.buttonAddGroup.Text = "Создать группу";
             this.buttonAddGroup.UseVisualStyleBackColor = false;
             this.buttonAddGroup.Click += new System.EventHandler(this.ButtonAddGroup_Click);
             // 
@@ -117,9 +117,9 @@
             this.textGroupName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textGroupName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textGroupName.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textGroupName.Location = new System.Drawing.Point(0, 362);
+            this.textGroupName.Location = new System.Drawing.Point(0, 339);
             this.textGroupName.Name = "textGroupName";
-            this.textGroupName.PlaceholderText = "  Group name";
+            this.textGroupName.PlaceholderText = "  Имя группы";
             this.textGroupName.Size = new System.Drawing.Size(188, 23);
             this.textGroupName.TabIndex = 9;
             // 
@@ -140,9 +140,9 @@
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
             this.label1.Location = new System.Drawing.Point(14, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 25);
+            this.label1.Size = new System.Drawing.Size(156, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Select your group";
+            this.label1.Text = "Веберете группу";
             // 
             // buttonSelect
             // 
@@ -156,7 +156,7 @@
             this.buttonSelect.Name = "buttonSelect";
             this.buttonSelect.Size = new System.Drawing.Size(166, 42);
             this.buttonSelect.TabIndex = 9;
-            this.buttonSelect.Text = "Select";
+            this.buttonSelect.Text = "Выбрать";
             this.buttonSelect.UseVisualStyleBackColor = false;
             this.buttonSelect.Click += new System.EventHandler(this.ButtonSelect_Click);
             // 
@@ -164,9 +164,9 @@
             // 
             this.panelCreate.Controls.Add(this.buttonAddGroup);
             this.panelCreate.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelCreate.Location = new System.Drawing.Point(0, 385);
+            this.panelCreate.Location = new System.Drawing.Point(0, 362);
             this.panelCreate.Name = "panelCreate";
-            this.panelCreate.Size = new System.Drawing.Size(188, 65);
+            this.panelCreate.Size = new System.Drawing.Size(188, 88);
             this.panelCreate.TabIndex = 10;
             // 
             // GroupsForm
@@ -175,7 +175,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
             this.Name = "GroupsForm";
-            this.Text = "SELECT GROUP";
+            this.Text = "ВЫБОР ГРУППЫ";
             this.Load += new System.EventHandler(this.GroupsForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

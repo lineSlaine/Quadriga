@@ -58,9 +58,9 @@
             this.labelIncorrectFirst.ForeColor = System.Drawing.Color.IndianRed;
             this.labelIncorrectFirst.Location = new System.Drawing.Point(12, 77);
             this.labelIncorrectFirst.Name = "labelIncorrectFirst";
-            this.labelIncorrectFirst.Size = new System.Drawing.Size(127, 19);
+            this.labelIncorrectFirst.Size = new System.Drawing.Size(131, 19);
             this.labelIncorrectFirst.TabIndex = 35;
-            this.labelIncorrectFirst.Text = "Incorrect Firstname";
+            this.labelIncorrectFirst.Text = "Неверная фамилия";
             this.labelIncorrectFirst.Visible = false;
             // 
             // labelIncorrectMiddle
@@ -72,9 +72,9 @@
             this.labelIncorrectMiddle.ForeColor = System.Drawing.Color.IndianRed;
             this.labelIncorrectMiddle.Location = new System.Drawing.Point(12, 159);
             this.labelIncorrectMiddle.Name = "labelIncorrectMiddle";
-            this.labelIncorrectMiddle.Size = new System.Drawing.Size(143, 19);
+            this.labelIncorrectMiddle.Size = new System.Drawing.Size(100, 19);
             this.labelIncorrectMiddle.TabIndex = 34;
-            this.labelIncorrectMiddle.Text = "Incorrect Middlename";
+            this.labelIncorrectMiddle.Text = "Неверное имя";
             this.labelIncorrectMiddle.Visible = false;
             // 
             // labelIncorrectLast
@@ -86,9 +86,9 @@
             this.labelIncorrectLast.ForeColor = System.Drawing.Color.IndianRed;
             this.labelIncorrectLast.Location = new System.Drawing.Point(12, 246);
             this.labelIncorrectLast.Name = "labelIncorrectLast";
-            this.labelIncorrectLast.Size = new System.Drawing.Size(126, 19);
+            this.labelIncorrectLast.Size = new System.Drawing.Size(131, 19);
             this.labelIncorrectLast.TabIndex = 33;
-            this.labelIncorrectLast.Text = "Incorrect Lastname";
+            this.labelIncorrectLast.Text = "Неверное отчество";
             this.labelIncorrectLast.Visible = false;
             // 
             // labelIncorrectPass
@@ -100,9 +100,9 @@
             this.labelIncorrectPass.ForeColor = System.Drawing.Color.IndianRed;
             this.labelIncorrectPass.Location = new System.Drawing.Point(342, 159);
             this.labelIncorrectPass.Name = "labelIncorrectPass";
-            this.labelIncorrectPass.Size = new System.Drawing.Size(125, 19);
+            this.labelIncorrectPass.Size = new System.Drawing.Size(123, 19);
             this.labelIncorrectPass.TabIndex = 32;
-            this.labelIncorrectPass.Text = "Incorrect Password";
+            this.labelIncorrectPass.Text = "Неверный пароль";
             this.labelIncorrectPass.Visible = false;
             // 
             // labelIncorrectEmail
@@ -114,9 +114,9 @@
             this.labelIncorrectEmail.ForeColor = System.Drawing.Color.IndianRed;
             this.labelIncorrectEmail.Location = new System.Drawing.Point(342, 77);
             this.labelIncorrectEmail.Name = "labelIncorrectEmail";
-            this.labelIncorrectEmail.Size = new System.Drawing.Size(99, 19);
+            this.labelIncorrectEmail.Size = new System.Drawing.Size(110, 19);
             this.labelIncorrectEmail.TabIndex = 31;
-            this.labelIncorrectEmail.Text = "Incorrect Email";
+            this.labelIncorrectEmail.Text = "Неверный email";
             this.labelIncorrectEmail.Visible = false;
             // 
             // label5
@@ -126,9 +126,9 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(12, 189);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 28);
+            this.label5.Size = new System.Drawing.Size(96, 28);
             this.label5.TabIndex = 30;
-            this.label5.Text = "Lastname";
+            this.label5.Text = "Отчество";
             // 
             // textLastname
             // 
@@ -148,9 +148,9 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(12, 102);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 28);
+            this.label4.Size = new System.Drawing.Size(51, 28);
             this.label4.TabIndex = 28;
-            this.label4.Text = "Middlename";
+            this.label4.Text = "Имя";
             // 
             // textMiddlename
             // 
@@ -170,9 +170,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(12, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 28);
+            this.label3.Size = new System.Drawing.Size(96, 28);
             this.label3.TabIndex = 26;
-            this.label3.Text = "Firstname";
+            this.label3.Text = "Фамилия";
             // 
             // textFirstname
             // 
@@ -192,9 +192,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(342, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 28);
+            this.label2.Size = new System.Drawing.Size(81, 28);
             this.label2.TabIndex = 24;
-            this.label2.Text = "Password";
+            this.label2.Text = "Пароль";
             // 
             // label1
             // 
@@ -239,9 +239,9 @@
             this.labelIncorrectJob.ForeColor = System.Drawing.Color.IndianRed;
             this.labelIncorrectJob.Location = new System.Drawing.Point(342, 246);
             this.labelIncorrectJob.Name = "labelIncorrectJob";
-            this.labelIncorrectJob.Size = new System.Drawing.Size(63, 19);
+            this.labelIncorrectJob.Size = new System.Drawing.Size(169, 19);
             this.labelIncorrectJob.TabIndex = 38;
-            this.labelIncorrectJob.Text = "Incorrect";
+            this.labelIncorrectJob.Text = "Неверно заполнено поле";
             this.labelIncorrectJob.Visible = false;
             // 
             // label7
@@ -251,9 +251,9 @@
             this.label7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.Location = new System.Drawing.Point(342, 189);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 28);
+            this.label7.Size = new System.Drawing.Size(75, 28);
             this.label7.TabIndex = 37;
-            this.label7.Text = "Job";
+            this.label7.Text = "Работа";
             // 
             // textJob
             // 
@@ -279,7 +279,7 @@
             this.buttonEnter.Name = "buttonEnter";
             this.buttonEnter.Size = new System.Drawing.Size(256, 61);
             this.buttonEnter.TabIndex = 39;
-            this.buttonEnter.Text = "Add new user";
+            this.buttonEnter.Text = "Создать";
             this.buttonEnter.UseVisualStyleBackColor = false;
             this.buttonEnter.Click += new System.EventHandler(this.buttonEnter_Click);
             // 

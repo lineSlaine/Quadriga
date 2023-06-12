@@ -63,9 +63,9 @@
             // 
             this.panelDelete.Controls.Add(this.buttonDeleteProject);
             this.panelDelete.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelDelete.Location = new System.Drawing.Point(0, 392);
+            this.panelDelete.Location = new System.Drawing.Point(0, 363);
             this.panelDelete.Name = "panelDelete";
-            this.panelDelete.Size = new System.Drawing.Size(188, 58);
+            this.panelDelete.Size = new System.Drawing.Size(188, 87);
             this.panelDelete.TabIndex = 12;
             // 
             // buttonDeleteProject
@@ -76,11 +76,11 @@
             this.buttonDeleteProject.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonDeleteProject.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonDeleteProject.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonDeleteProject.Location = new System.Drawing.Point(12, 4);
+            this.buttonDeleteProject.Location = new System.Drawing.Point(12, 3);
             this.buttonDeleteProject.Name = "buttonDeleteProject";
-            this.buttonDeleteProject.Size = new System.Drawing.Size(166, 42);
+            this.buttonDeleteProject.Size = new System.Drawing.Size(166, 75);
             this.buttonDeleteProject.TabIndex = 15;
-            this.buttonDeleteProject.Text = "Delete Project";
+            this.buttonDeleteProject.Text = "Удалить проект";
             this.buttonDeleteProject.UseVisualStyleBackColor = false;
             this.buttonDeleteProject.Click += new System.EventHandler(this.buttonDeleteProject_Click);
             // 
@@ -93,7 +93,7 @@
             this.panelOptions.Enabled = false;
             this.panelOptions.Location = new System.Drawing.Point(0, 169);
             this.panelOptions.Name = "panelOptions";
-            this.panelOptions.Size = new System.Drawing.Size(188, 142);
+            this.panelOptions.Size = new System.Drawing.Size(188, 161);
             this.panelOptions.TabIndex = 11;
             this.panelOptions.Visible = false;
             // 
@@ -108,9 +108,9 @@
             this.buttonRename.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonRename.Location = new System.Drawing.Point(0, 84);
             this.buttonRename.Name = "buttonRename";
-            this.buttonRename.Size = new System.Drawing.Size(188, 42);
+            this.buttonRename.Size = new System.Drawing.Size(188, 69);
             this.buttonRename.TabIndex = 14;
-            this.buttonRename.Text = "Rename project";
+            this.buttonRename.Text = "Изменить имя проекта";
             this.buttonRename.UseVisualStyleBackColor = false;
             this.buttonRename.Click += new System.EventHandler(this.buttonRename_Click);
             // 
@@ -127,7 +127,7 @@
             this.buttonAddGroup.Name = "buttonAddGroup";
             this.buttonAddGroup.Size = new System.Drawing.Size(188, 42);
             this.buttonAddGroup.TabIndex = 13;
-            this.buttonAddGroup.Text = "Add Group";
+            this.buttonAddGroup.Text = "Добавить группу";
             this.buttonAddGroup.UseVisualStyleBackColor = false;
             this.buttonAddGroup.Click += new System.EventHandler(this.buttonAddGroup_Click);
             // 
@@ -144,7 +144,7 @@
             this.buttonGroupList.Name = "buttonGroupList";
             this.buttonGroupList.Size = new System.Drawing.Size(188, 42);
             this.buttonGroupList.TabIndex = 12;
-            this.buttonGroupList.Text = "Group List";
+            this.buttonGroupList.Text = "Список групп";
             this.buttonGroupList.UseVisualStyleBackColor = false;
             this.buttonGroupList.Click += new System.EventHandler(this.buttonGroupList_Click);
             // 
@@ -171,7 +171,7 @@
             this.buttonSelectProject.Name = "buttonSelectProject";
             this.buttonSelectProject.Size = new System.Drawing.Size(188, 42);
             this.buttonSelectProject.TabIndex = 11;
-            this.buttonSelectProject.Text = "Select";
+            this.buttonSelectProject.Text = "Выбрать";
             this.buttonSelectProject.UseVisualStyleBackColor = false;
             this.buttonSelectProject.Click += new System.EventHandler(this.buttonSelectProject_Click);
             // 
@@ -188,7 +188,7 @@
             this.buttonCreateProject.Name = "buttonCreateProject";
             this.buttonCreateProject.Size = new System.Drawing.Size(188, 42);
             this.buttonCreateProject.TabIndex = 10;
-            this.buttonCreateProject.Text = "Create";
+            this.buttonCreateProject.Text = "Создать";
             this.buttonCreateProject.UseVisualStyleBackColor = false;
             this.buttonCreateProject.Click += new System.EventHandler(this.buttonCreateGroup_Click);
             // 
@@ -202,7 +202,7 @@
             this.labelProjectName.Name = "labelProjectName";
             this.labelProjectName.Size = new System.Drawing.Size(188, 71);
             this.labelProjectName.TabIndex = 9;
-            this.labelProjectName.Text = "Project name";
+            this.labelProjectName.Text = "Название проекта";
             this.labelProjectName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelProjectName.Visible = false;
             // 

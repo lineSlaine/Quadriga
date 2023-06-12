@@ -57,7 +57,7 @@
             this.buttonLogOut.Name = "buttonLogOut";
             this.buttonLogOut.Size = new System.Drawing.Size(188, 52);
             this.buttonLogOut.TabIndex = 2;
-            this.buttonLogOut.Text = " Log Out";
+            this.buttonLogOut.Text = " Выйти";
             this.buttonLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonLogOut.UseVisualStyleBackColor = true;
             this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
@@ -73,7 +73,7 @@
             this.buttonProfile.Name = "buttonProfile";
             this.buttonProfile.Size = new System.Drawing.Size(188, 52);
             this.buttonProfile.TabIndex = 1;
-            this.buttonProfile.Text = " Profile";
+            this.buttonProfile.Text = " Профиль";
             this.buttonProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonProfile.UseVisualStyleBackColor = true;
             this.buttonProfile.Click += new System.EventHandler(this.buttonProfile_Click);
@@ -94,7 +94,7 @@
             this.Controls.Add(this.panelActiveForm);
             this.Controls.Add(this.panelMenuSet);
             this.Name = "Settings";
-            this.Text = "SETTINGS";
+            this.Text = "НАСТРОЙКИ";
             this.Load += new System.EventHandler(this.Settings_Load);
             this.panelMenuSet.ResumeLayout(false);
             this.ResumeLayout(false);

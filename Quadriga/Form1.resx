@@ -58,59 +58,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="buttonStatistics.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="buttonStatistics.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonStatistics.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="buttonStatistics.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="buttonStatistics.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonStatistics.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 306</value>
-  </data>
-  <data name="buttonStatistics.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 48</value>
-  </data>
-  <data name="buttonStatistics.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="buttonStatistics.Text" xml:space="preserve">
-    <value> Statistics</value>
-  </data>
-  <data name="buttonStatistics.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="buttonStatistics.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;buttonStatistics.Name" xml:space="preserve">
-    <value>buttonStatistics</value>
-  </data>
-  <data name="&gt;&gt;buttonStatistics.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonStatistics.Parent" xml:space="preserve">
-    <value>menuPanel</value>
-  </data>
-  <data name="&gt;&gt;buttonStatistics.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="buttonProjects.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
   <data name="buttonProjects.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonProjects.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 15.75pt</value>
   </data>
@@ -118,16 +72,17 @@
     <value>NoControl</value>
   </data>
   <data name="buttonProjects.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 258</value>
+    <value>0, 162</value>
   </data>
   <data name="buttonProjects.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 48</value>
+    <value>208, 48</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="buttonProjects.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
   <data name="buttonProjects.Text" xml:space="preserve">
-    <value> Projects</value>
+    <value> Проекты</value>
   </data>
   <data name="buttonProjects.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -142,52 +97,7 @@
     <value>menuPanel</value>
   </data>
   <data name="&gt;&gt;buttonProjects.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="buttonReports.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="buttonReports.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonReports.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="buttonReports.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="buttonReports.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonReports.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 210</value>
-  </data>
-  <data name="buttonReports.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 48</value>
-  </data>
-  <data name="buttonReports.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="buttonReports.Text" xml:space="preserve">
-    <value> Reports</value>
-  </data>
-  <data name="buttonReports.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="buttonReports.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;buttonReports.Name" xml:space="preserve">
-    <value>buttonReports</value>
-  </data>
-  <data name="&gt;&gt;buttonReports.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonReports.Parent" xml:space="preserve">
-    <value>menuPanel</value>
-  </data>
-  <data name="&gt;&gt;buttonReports.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="buttonLPeople.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -205,16 +115,16 @@
     <value>NoControl</value>
   </data>
   <data name="buttonLPeople.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 162</value>
+    <value>0, 114</value>
   </data>
   <data name="buttonLPeople.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 48</value>
+    <value>208, 48</value>
   </data>
   <data name="buttonLPeople.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
   <data name="buttonLPeople.Text" xml:space="preserve">
-    <value> List of people</value>
+    <value> Люди</value>
   </data>
   <data name="buttonLPeople.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -229,7 +139,7 @@
     <value>menuPanel</value>
   </data>
   <data name="&gt;&gt;buttonLPeople.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="buttonTasks.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -247,16 +157,16 @@
     <value>NoControl</value>
   </data>
   <data name="buttonTasks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 114</value>
+    <value>0, 66</value>
   </data>
   <data name="buttonTasks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 48</value>
+    <value>208, 48</value>
   </data>
   <data name="buttonTasks.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
   <data name="buttonTasks.Text" xml:space="preserve">
-    <value> Tasks</value>
+    <value> Мои задачи</value>
   </data>
   <data name="buttonTasks.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -271,52 +181,7 @@
     <value>menuPanel</value>
   </data>
   <data name="&gt;&gt;buttonTasks.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="buttonMessages.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="buttonMessages.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonMessages.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="buttonMessages.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="buttonMessages.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonMessages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 66</value>
-  </data>
-  <data name="buttonMessages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 48</value>
-  </data>
-  <data name="buttonMessages.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="buttonMessages.Text" xml:space="preserve">
-    <value> Messages</value>
-  </data>
-  <data name="buttonMessages.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="buttonMessages.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;buttonMessages.Name" xml:space="preserve">
-    <value>buttonMessages</value>
-  </data>
-  <data name="&gt;&gt;buttonMessages.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonMessages.Parent" xml:space="preserve">
-    <value>menuPanel</value>
-  </data>
-  <data name="&gt;&gt;buttonMessages.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>2</value>
   </data>
   <data name="buttonGSettings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
@@ -334,13 +199,13 @@
     <value>0, 465</value>
   </data>
   <data name="buttonGSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 48</value>
+    <value>208, 48</value>
   </data>
   <data name="buttonGSettings.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
   <data name="buttonGSettings.Text" xml:space="preserve">
-    <value> Group settings</value>
+    <value> Настройки группы</value>
   </data>
   <data name="buttonGSettings.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -355,7 +220,7 @@
     <value>menuPanel</value>
   </data>
   <data name="&gt;&gt;buttonGSettings.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>3</value>
   </data>
   <data name="buttonSettings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
@@ -370,13 +235,13 @@
     <value>0, 513</value>
   </data>
   <data name="buttonSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 48</value>
+    <value>208, 48</value>
   </data>
   <data name="buttonSettings.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
   <data name="buttonSettings.Text" xml:space="preserve">
-    <value> Settings</value>
+    <value> Настройки</value>
   </data>
   <data name="buttonSettings.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -391,7 +256,7 @@
     <value>menuPanel</value>
   </data>
   <data name="&gt;&gt;buttonSettings.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>4</value>
   </data>
   <data name="buttonSelectGroup.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -409,13 +274,13 @@
     <value>83, 0</value>
   </data>
   <data name="buttonSelectGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 66</value>
+    <value>125, 66</value>
   </data>
   <data name="buttonSelectGroup.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
   <data name="buttonSelectGroup.Text" xml:space="preserve">
-    <value>Select Group</value>
+    <value>Выбор группы</value>
   </data>
   <data name="&gt;&gt;buttonSelectGroup.Name" xml:space="preserve">
     <value>buttonSelectGroup</value>
@@ -492,7 +357,7 @@
     <value>0, 0</value>
   </data>
   <data name="logoPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 66</value>
+    <value>208, 66</value>
   </data>
   <data name="logoPanel.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -507,7 +372,7 @@
     <value>menuPanel</value>
   </data>
   <data name="&gt;&gt;logoPanel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>5</value>
   </data>
   <data name="menuPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -516,7 +381,7 @@
     <value>0, 0</value>
   </data>
   <data name="menuPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 561</value>
+    <value>208, 561</value>
   </data>
   <data name="menuPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -543,7 +408,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="buttonMin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>739, 3</value>
+    <value>732, 3</value>
   </data>
   <data name="buttonMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 26</value>
@@ -576,7 +441,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="buttonMax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>771, 0</value>
+    <value>764, 0</value>
   </data>
   <data name="buttonMax.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 26</value>
@@ -609,7 +474,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="buttonClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>803, 0</value>
+    <value>796, 0</value>
   </data>
   <data name="buttonClose.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 26</value>
@@ -645,13 +510,13 @@
     <value>0, 0</value>
   </data>
   <data name="labelTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>829, 66</value>
+    <value>822, 66</value>
   </data>
   <data name="labelTitle.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="labelTitle.Text" xml:space="preserve">
-    <value>HOME</value>
+    <value>ГЛАВНАЯ</value>
   </data>
   <data name="labelTitle.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -672,10 +537,10 @@
     <value>Top</value>
   </data>
   <data name="panelTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 0</value>
+    <value>208, 0</value>
   </data>
   <data name="panelTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>829, 66</value>
+    <value>822, 66</value>
   </data>
   <data name="panelTitle.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -696,10 +561,10 @@
     <value>Fill</value>
   </data>
   <data name="panelActiveForm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 66</value>
+    <value>208, 66</value>
   </data>
   <data name="panelActiveForm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>829, 495</value>
+    <value>822, 495</value>
   </data>
   <data name="panelActiveForm.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>

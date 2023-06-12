@@ -45,9 +45,9 @@
             this.labelIncorrectEmail.ForeColor = System.Drawing.Color.IndianRed;
             this.labelIncorrectEmail.Location = new System.Drawing.Point(52, 109);
             this.labelIncorrectEmail.Name = "labelIncorrectEmail";
-            this.labelIncorrectEmail.Size = new System.Drawing.Size(99, 19);
+            this.labelIncorrectEmail.Size = new System.Drawing.Size(110, 19);
             this.labelIncorrectEmail.TabIndex = 19;
-            this.labelIncorrectEmail.Text = "Incorrect Email";
+            this.labelIncorrectEmail.Text = "Неверный Email";
             this.labelIncorrectEmail.Visible = false;
             // 
             // label1
@@ -84,7 +84,7 @@
             this.buttonAddUser.Name = "buttonAddUser";
             this.buttonAddUser.Size = new System.Drawing.Size(160, 41);
             this.buttonAddUser.TabIndex = 20;
-            this.buttonAddUser.Text = "Add user";
+            this.buttonAddUser.Text = "Добавить";
             this.buttonAddUser.UseVisualStyleBackColor = false;
             this.buttonAddUser.Click += new System.EventHandler(this.buttonAddUser_Click);
             // 
@@ -98,7 +98,7 @@
             this.labelError.Name = "labelError";
             this.labelError.Size = new System.Drawing.Size(540, 19);
             this.labelError.TabIndex = 22;
-            this.labelError.Text = "The user does not exist.";
+            this.labelError.Text = "Такого пользователя не существует";
             this.labelError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelError.Visible = false;
             // 
@@ -112,7 +112,7 @@
             this.labelSuccessfully.Name = "labelSuccessfully";
             this.labelSuccessfully.Size = new System.Drawing.Size(540, 19);
             this.labelSuccessfully.TabIndex = 23;
-            this.labelSuccessfully.Text = "Successfully";
+            this.labelSuccessfully.Text = "Пользователь добавлен";
             this.labelSuccessfully.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelSuccessfully.Visible = false;
             // 

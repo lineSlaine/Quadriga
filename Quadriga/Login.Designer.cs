@@ -35,7 +35,6 @@
             this.labelError = new System.Windows.Forms.Label();
             this.labelIncorrectEmail = new System.Windows.Forms.Label();
             this.labelIncorrectPass = new System.Windows.Forms.Label();
-            this.checkRemember = new System.Windows.Forms.CheckBox();
             this.buttonEnter = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,7 +50,6 @@
             this.panel1.Controls.Add(this.labelError);
             this.panel1.Controls.Add(this.labelIncorrectEmail);
             this.panel1.Controls.Add(this.labelIncorrectPass);
-            this.panel1.Controls.Add(this.checkRemember);
             this.panel1.Controls.Add(this.buttonEnter);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -81,11 +79,11 @@
             this.labelSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelSignUp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.labelSignUp.ForeColor = System.Drawing.Color.Black;
-            this.labelSignUp.Location = new System.Drawing.Point(383, 431);
+            this.labelSignUp.Location = new System.Drawing.Point(337, 431);
             this.labelSignUp.Name = "labelSignUp";
-            this.labelSignUp.Size = new System.Drawing.Size(63, 21);
+            this.labelSignUp.Size = new System.Drawing.Size(155, 21);
             this.labelSignUp.TabIndex = 10;
-            this.labelSignUp.Text = "Sign up";
+            this.labelSignUp.Text = "Зарегистрироваться";
             this.labelSignUp.Click += new System.EventHandler(this.LabelSignUp_Click);
             this.labelSignUp.MouseEnter += new System.EventHandler(this.LabelSignUp_MouseEnter);
             this.labelSignUp.MouseLeave += new System.EventHandler(this.LabelSignUp_MouseLeave);
@@ -100,7 +98,7 @@
             this.labelError.Name = "labelError";
             this.labelError.Size = new System.Drawing.Size(540, 19);
             this.labelError.TabIndex = 9;
-            this.labelError.Text = "Incorrect Email or Password";
+            this.labelError.Text = "Неверный Email или пароль";
             this.labelError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelError.Visible = false;
             // 
@@ -113,9 +111,9 @@
             this.labelIncorrectEmail.ForeColor = System.Drawing.Color.IndianRed;
             this.labelIncorrectEmail.Location = new System.Drawing.Point(286, 192);
             this.labelIncorrectEmail.Name = "labelIncorrectEmail";
-            this.labelIncorrectEmail.Size = new System.Drawing.Size(99, 19);
+            this.labelIncorrectEmail.Size = new System.Drawing.Size(110, 19);
             this.labelIncorrectEmail.TabIndex = 8;
-            this.labelIncorrectEmail.Text = "Incorrect Email";
+            this.labelIncorrectEmail.Text = "Неверный Email";
             this.labelIncorrectEmail.Visible = false;
             // 
             // labelIncorrectPass
@@ -127,25 +125,10 @@
             this.labelIncorrectPass.ForeColor = System.Drawing.Color.IndianRed;
             this.labelIncorrectPass.Location = new System.Drawing.Point(284, 274);
             this.labelIncorrectPass.Name = "labelIncorrectPass";
-            this.labelIncorrectPass.Size = new System.Drawing.Size(125, 19);
+            this.labelIncorrectPass.Size = new System.Drawing.Size(123, 19);
             this.labelIncorrectPass.TabIndex = 7;
-            this.labelIncorrectPass.Text = "Incorrect Password";
+            this.labelIncorrectPass.Text = "Неверный пароль";
             this.labelIncorrectPass.Visible = false;
-            // 
-            // checkRemember
-            // 
-            this.checkRemember.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.checkRemember.AutoSize = true;
-            this.checkRemember.FlatAppearance.BorderSize = 0;
-            this.checkRemember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkRemember.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkRemember.Location = new System.Drawing.Point(286, 324);
-            this.checkRemember.Name = "checkRemember";
-            this.checkRemember.Size = new System.Drawing.Size(123, 24);
-            this.checkRemember.TabIndex = 6;
-            this.checkRemember.Text = "Remember me";
-            this.checkRemember.UseVisualStyleBackColor = true;
-            this.checkRemember.CheckedChanged += new System.EventHandler(this.checkRemember_CheckedChanged);
             // 
             // buttonEnter
             // 
@@ -159,7 +142,7 @@
             this.buttonEnter.Name = "buttonEnter";
             this.buttonEnter.Size = new System.Drawing.Size(256, 61);
             this.buttonEnter.TabIndex = 4;
-            this.buttonEnter.Text = "Login";
+            this.buttonEnter.Text = "Вход";
             this.buttonEnter.UseVisualStyleBackColor = false;
             this.buttonEnter.Click += new System.EventHandler(this.ButtonEnter_Click);
             // 
@@ -170,9 +153,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(286, 217);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 28);
+            this.label2.Size = new System.Drawing.Size(81, 28);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Password";
+            this.label2.Text = "Пароль";
             // 
             // label1
             // 
@@ -215,7 +198,7 @@
             this.ClientSize = new System.Drawing.Size(829, 495);
             this.Controls.Add(this.panel1);
             this.Name = "Login";
-            this.Text = "LOGIN";
+            this.Text = "ВХОД";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -230,7 +213,6 @@
         private Label label1;
         private TextBox textPassword;
         private TextBox textUsername;
-        private CheckBox checkRemember;
         private Label labelIncorrectPass;
         private Label labelIncorrectEmail;
         private Label labelError;

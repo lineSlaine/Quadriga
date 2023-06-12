@@ -46,7 +46,7 @@
             this.buttonEnter.Name = "buttonEnter";
             this.buttonEnter.Size = new System.Drawing.Size(256, 61);
             this.buttonEnter.TabIndex = 7;
-            this.buttonEnter.Text = "Update";
+            this.buttonEnter.Text = "Изменить";
             this.buttonEnter.UseVisualStyleBackColor = false;
             this.buttonEnter.Click += new System.EventHandler(this.buttonEnter_Click);
             // 
@@ -57,9 +57,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(33, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 28);
+            this.label1.Size = new System.Drawing.Size(100, 28);
             this.label1.TabIndex = 6;
-            this.label1.Text = "New Group name";
+            this.label1.Text = "Название";
             // 
             // textName
             // 
@@ -82,7 +82,7 @@
             this.labelSuccessfully.Name = "labelSuccessfully";
             this.labelSuccessfully.Size = new System.Drawing.Size(540, 19);
             this.labelSuccessfully.TabIndex = 24;
-            this.labelSuccessfully.Text = "Successfully";
+            this.labelSuccessfully.Text = "Успешно";
             this.labelSuccessfully.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelSuccessfully.Visible = false;
             // 

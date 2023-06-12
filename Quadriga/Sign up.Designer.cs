@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelError = new System.Windows.Forms.Label();
             this.labelIncorrectFirst = new System.Windows.Forms.Label();
             this.labelIncorrectMiddle = new System.Windows.Forms.Label();
             this.labelIncorrectLast = new System.Windows.Forms.Label();
             this.labelIncorrectPass = new System.Windows.Forms.Label();
             this.labelIncorrectEmail = new System.Windows.Forms.Label();
-            this.checkAgree = new System.Windows.Forms.CheckBox();
             this.buttonEnter = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textLastname = new System.Windows.Forms.TextBox();
@@ -46,7 +46,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textUsername = new System.Windows.Forms.TextBox();
             this.textPassword = new System.Windows.Forms.TextBox();
-            this.labelError = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +57,6 @@
             this.panel1.Controls.Add(this.labelIncorrectLast);
             this.panel1.Controls.Add(this.labelIncorrectPass);
             this.panel1.Controls.Add(this.labelIncorrectEmail);
-            this.panel1.Controls.Add(this.checkAgree);
             this.panel1.Controls.Add(this.buttonEnter);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.textLastname);
@@ -76,6 +74,20 @@
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 0;
             // 
+            // labelError
+            // 
+            this.labelError.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelError.BackColor = System.Drawing.Color.Transparent;
+            this.labelError.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelError.ForeColor = System.Drawing.Color.IndianRed;
+            this.labelError.Location = new System.Drawing.Point(130, 408);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(540, 19);
+            this.labelError.TabIndex = 21;
+            this.labelError.Text = "Неверный Email или пароль";
+            this.labelError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelError.Visible = false;
+            // 
             // labelIncorrectFirst
             // 
             this.labelIncorrectFirst.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -85,9 +97,9 @@
             this.labelIncorrectFirst.ForeColor = System.Drawing.Color.IndianRed;
             this.labelIncorrectFirst.Location = new System.Drawing.Point(94, 95);
             this.labelIncorrectFirst.Name = "labelIncorrectFirst";
-            this.labelIncorrectFirst.Size = new System.Drawing.Size(127, 19);
+            this.labelIncorrectFirst.Size = new System.Drawing.Size(131, 19);
             this.labelIncorrectFirst.TabIndex = 20;
-            this.labelIncorrectFirst.Text = "Incorrect Firstname";
+            this.labelIncorrectFirst.Text = "Неверная фамилия";
             this.labelIncorrectFirst.Visible = false;
             // 
             // labelIncorrectMiddle
@@ -99,9 +111,9 @@
             this.labelIncorrectMiddle.ForeColor = System.Drawing.Color.IndianRed;
             this.labelIncorrectMiddle.Location = new System.Drawing.Point(94, 177);
             this.labelIncorrectMiddle.Name = "labelIncorrectMiddle";
-            this.labelIncorrectMiddle.Size = new System.Drawing.Size(143, 19);
+            this.labelIncorrectMiddle.Size = new System.Drawing.Size(100, 19);
             this.labelIncorrectMiddle.TabIndex = 19;
-            this.labelIncorrectMiddle.Text = "Incorrect Middlename";
+            this.labelIncorrectMiddle.Text = "Неверное имя";
             this.labelIncorrectMiddle.Visible = false;
             // 
             // labelIncorrectLast
@@ -113,9 +125,9 @@
             this.labelIncorrectLast.ForeColor = System.Drawing.Color.IndianRed;
             this.labelIncorrectLast.Location = new System.Drawing.Point(94, 264);
             this.labelIncorrectLast.Name = "labelIncorrectLast";
-            this.labelIncorrectLast.Size = new System.Drawing.Size(126, 19);
+            this.labelIncorrectLast.Size = new System.Drawing.Size(131, 19);
             this.labelIncorrectLast.TabIndex = 18;
-            this.labelIncorrectLast.Text = "Incorrect Lastname";
+            this.labelIncorrectLast.Text = "Неверное отчество";
             this.labelIncorrectLast.Visible = false;
             // 
             // labelIncorrectPass
@@ -127,9 +139,9 @@
             this.labelIncorrectPass.ForeColor = System.Drawing.Color.IndianRed;
             this.labelIncorrectPass.Location = new System.Drawing.Point(432, 177);
             this.labelIncorrectPass.Name = "labelIncorrectPass";
-            this.labelIncorrectPass.Size = new System.Drawing.Size(125, 19);
+            this.labelIncorrectPass.Size = new System.Drawing.Size(123, 19);
             this.labelIncorrectPass.TabIndex = 17;
-            this.labelIncorrectPass.Text = "Incorrect Password";
+            this.labelIncorrectPass.Text = "Неверный пароль";
             this.labelIncorrectPass.Visible = false;
             // 
             // labelIncorrectEmail
@@ -141,31 +153,15 @@
             this.labelIncorrectEmail.ForeColor = System.Drawing.Color.IndianRed;
             this.labelIncorrectEmail.Location = new System.Drawing.Point(432, 95);
             this.labelIncorrectEmail.Name = "labelIncorrectEmail";
-            this.labelIncorrectEmail.Size = new System.Drawing.Size(99, 19);
+            this.labelIncorrectEmail.Size = new System.Drawing.Size(110, 19);
             this.labelIncorrectEmail.TabIndex = 16;
-            this.labelIncorrectEmail.Text = "Incorrect Email";
+            this.labelIncorrectEmail.Text = "Неверный Email";
             this.labelIncorrectEmail.Visible = false;
-            // 
-            // checkAgree
-            // 
-            this.checkAgree.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.checkAgree.AutoSize = true;
-            this.checkAgree.FlatAppearance.BorderSize = 0;
-            this.checkAgree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkAgree.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkAgree.Location = new System.Drawing.Point(364, 314);
-            this.checkAgree.Name = "checkAgree";
-            this.checkAgree.Size = new System.Drawing.Size(73, 24);
-            this.checkAgree.TabIndex = 15;
-            this.checkAgree.Text = "I Agree";
-            this.checkAgree.UseVisualStyleBackColor = true;
-            this.checkAgree.CheckedChanged += new System.EventHandler(this.checkAgree_CheckedChanged);
             // 
             // buttonEnter
             // 
             this.buttonEnter.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonEnter.BackColor = System.Drawing.Color.Silver;
-            this.buttonEnter.Enabled = false;
+            this.buttonEnter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.buttonEnter.FlatAppearance.BorderSize = 0;
             this.buttonEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEnter.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -174,7 +170,7 @@
             this.buttonEnter.Name = "buttonEnter";
             this.buttonEnter.Size = new System.Drawing.Size(256, 61);
             this.buttonEnter.TabIndex = 14;
-            this.buttonEnter.Text = "Registration";
+            this.buttonEnter.Text = "Зарегистрироваться";
             this.buttonEnter.UseVisualStyleBackColor = false;
             this.buttonEnter.Click += new System.EventHandler(this.buttonEnter_Click);
             // 
@@ -185,9 +181,9 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(94, 207);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 28);
+            this.label5.Size = new System.Drawing.Size(96, 28);
             this.label5.TabIndex = 13;
-            this.label5.Text = "Lastname";
+            this.label5.Text = "Отчество";
             // 
             // textLastname
             // 
@@ -207,9 +203,9 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(94, 120);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 28);
+            this.label4.Size = new System.Drawing.Size(51, 28);
             this.label4.TabIndex = 11;
-            this.label4.Text = "Middlename";
+            this.label4.Text = "Имя";
             // 
             // textMiddlename
             // 
@@ -229,9 +225,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(94, 38);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 28);
+            this.label3.Size = new System.Drawing.Size(96, 28);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Firstname";
+            this.label3.Text = "Фамилия";
             // 
             // textFirstname
             // 
@@ -251,9 +247,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(432, 120);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 28);
+            this.label2.Size = new System.Drawing.Size(81, 28);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Password";
+            this.label2.Text = "Пароль";
             // 
             // label1
             // 
@@ -289,20 +285,6 @@
             this.textPassword.Size = new System.Drawing.Size(256, 23);
             this.textPassword.TabIndex = 5;
             // 
-            // labelError
-            // 
-            this.labelError.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelError.BackColor = System.Drawing.Color.Transparent;
-            this.labelError.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelError.ForeColor = System.Drawing.Color.IndianRed;
-            this.labelError.Location = new System.Drawing.Point(130, 408);
-            this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(540, 19);
-            this.labelError.TabIndex = 21;
-            this.labelError.Text = "Incorrect Email or Password";
-            this.labelError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelError.Visible = false;
-            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -310,7 +292,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Name = "Registration";
-            this.Text = "REGISTRATION";
+            this.Text = "РЕГИСТРАЦИЯ";
             this.Load += new System.EventHandler(this.Registration_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -332,7 +314,6 @@
         private TextBox textUsername;
         private TextBox textPassword;
         private Button buttonEnter;
-        private CheckBox checkAgree;
         private Label labelIncorrectEmail;
         private Label labelIncorrectFirst;
         private Label labelIncorrectMiddle;

@@ -45,7 +45,7 @@
             this.labelSuccessfully.Name = "labelSuccessfully";
             this.labelSuccessfully.Size = new System.Drawing.Size(160, 19);
             this.labelSuccessfully.TabIndex = 34;
-            this.labelSuccessfully.Text = "Successfully";
+            this.labelSuccessfully.Text = "Успешно";
             this.labelSuccessfully.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelSuccessfully.Visible = false;
             // 
@@ -61,7 +61,7 @@
             this.buttonRename.Name = "buttonRename";
             this.buttonRename.Size = new System.Drawing.Size(160, 41);
             this.buttonRename.TabIndex = 33;
-            this.buttonRename.Text = "Rename";
+            this.buttonRename.Text = "Изменить";
             this.buttonRename.UseVisualStyleBackColor = false;
             this.buttonRename.Click += new System.EventHandler(this.buttonRename_Click);
             // 
@@ -74,9 +74,9 @@
             this.labelIncorrectName.ForeColor = System.Drawing.Color.IndianRed;
             this.labelIncorrectName.Location = new System.Drawing.Point(29, 84);
             this.labelIncorrectName.Name = "labelIncorrectName";
-            this.labelIncorrectName.Size = new System.Drawing.Size(101, 19);
+            this.labelIncorrectName.Size = new System.Drawing.Size(133, 19);
             this.labelIncorrectName.TabIndex = 32;
-            this.labelIncorrectName.Text = "Incorrect name";
+            this.labelIncorrectName.Text = "Неверное название";
             this.labelIncorrectName.Visible = false;
             // 
             // label1
@@ -86,9 +86,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(29, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 28);
+            this.label1.Size = new System.Drawing.Size(100, 28);
             this.label1.TabIndex = 31;
-            this.label1.Text = "Name";
+            this.label1.Text = "Название";
             // 
             // textUsername
             // 

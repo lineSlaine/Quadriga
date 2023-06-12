@@ -45,7 +45,7 @@
             this.labelSuccessfully.Name = "labelSuccessfully";
             this.labelSuccessfully.Size = new System.Drawing.Size(160, 19);
             this.labelSuccessfully.TabIndex = 29;
-            this.labelSuccessfully.Text = "Successfully";
+            this.labelSuccessfully.Text = "Успешно";
             this.labelSuccessfully.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelSuccessfully.Visible = false;
             // 
@@ -61,7 +61,7 @@
             this.buttonCreate.Name = "buttonCreate";
             this.buttonCreate.Size = new System.Drawing.Size(160, 41);
             this.buttonCreate.TabIndex = 27;
-            this.buttonCreate.Text = "Create project";
+            this.buttonCreate.Text = "Создать";
             this.buttonCreate.UseVisualStyleBackColor = false;
             this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
             // 
@@ -74,9 +74,9 @@
             this.labelIncorrectName.ForeColor = System.Drawing.Color.IndianRed;
             this.labelIncorrectName.Location = new System.Drawing.Point(38, 77);
             this.labelIncorrectName.Name = "labelIncorrectName";
-            this.labelIncorrectName.Size = new System.Drawing.Size(101, 19);
+            this.labelIncorrectName.Size = new System.Drawing.Size(133, 19);
             this.labelIncorrectName.TabIndex = 26;
-            this.labelIncorrectName.Text = "Incorrect name";
+            this.labelIncorrectName.Text = "Неверное название";
             this.labelIncorrectName.Visible = false;
             // 
             // label1
@@ -86,9 +86,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(38, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 28);
+            this.label1.Size = new System.Drawing.Size(100, 28);
             this.label1.TabIndex = 25;
-            this.label1.Text = "Name";
+            this.label1.Text = "Название";
             // 
             // textUsername
             // 
@@ -112,7 +112,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textUsername);
             this.Name = "CreateProject";
-            this.Text = "CreateProject";
+            this.Text = "СОЗДАНИЕ ПРОЕКТА";
             this.Load += new System.EventHandler(this.CreateProject_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

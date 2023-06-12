@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.listBox = new System.Windows.Forms.ListBox();
             this.buttonDelete = new System.Windows.Forms.Button();
+            this.listBox = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,6 +42,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(596, 44);
             this.panel1.TabIndex = 3;
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.buttonDelete.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonDelete.FlatAppearance.BorderSize = 0;
+            this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDelete.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonDelete.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonDelete.Location = new System.Drawing.Point(0, 0);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(202, 44);
+            this.buttonDelete.TabIndex = 13;
+            this.buttonDelete.Text = "Удалить группу";
+            this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // listBox
             // 
@@ -61,23 +78,6 @@
             this.listBox.Name = "listBox";
             this.listBox.Size = new System.Drawing.Size(596, 367);
             this.listBox.TabIndex = 4;
-            // 
-            // buttonDelete
-            // 
-            this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.buttonDelete.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonDelete.FlatAppearance.BorderSize = 0;
-            this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDelete.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonDelete.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonDelete.Location = new System.Drawing.Point(0, 0);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(272, 44);
-            this.buttonDelete.TabIndex = 13;
-            this.buttonDelete.Text = "Delete selected group";
-            this.buttonDelete.UseVisualStyleBackColor = false;
-            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // ProjectGroupList
             // 

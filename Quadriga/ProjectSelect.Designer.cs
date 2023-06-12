@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.listBox = new System.Windows.Forms.ListBox();
             this.buttonSelect = new System.Windows.Forms.Button();
+            this.listBox = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,6 +42,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(596, 54);
             this.panel1.TabIndex = 0;
+            // 
+            // buttonSelect
+            // 
+            this.buttonSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.buttonSelect.FlatAppearance.BorderSize = 0;
+            this.buttonSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSelect.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSelect.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonSelect.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonSelect.Location = new System.Drawing.Point(12, 6);
+            this.buttonSelect.Name = "buttonSelect";
+            this.buttonSelect.Size = new System.Drawing.Size(166, 42);
+            this.buttonSelect.TabIndex = 10;
+            this.buttonSelect.Text = "Выбрать";
+            this.buttonSelect.UseVisualStyleBackColor = false;
+            this.buttonSelect.Click += new System.EventHandler(this.buttonSelect_Click);
             // 
             // listBox
             // 
@@ -61,22 +77,6 @@
             this.listBox.Name = "listBox";
             this.listBox.Size = new System.Drawing.Size(596, 357);
             this.listBox.TabIndex = 1;
-            // 
-            // buttonSelect
-            // 
-            this.buttonSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.buttonSelect.FlatAppearance.BorderSize = 0;
-            this.buttonSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSelect.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonSelect.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonSelect.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonSelect.Location = new System.Drawing.Point(12, 6);
-            this.buttonSelect.Name = "buttonSelect";
-            this.buttonSelect.Size = new System.Drawing.Size(166, 42);
-            this.buttonSelect.TabIndex = 10;
-            this.buttonSelect.Text = "Select Project";
-            this.buttonSelect.UseVisualStyleBackColor = false;
-            this.buttonSelect.Click += new System.EventHandler(this.buttonSelect_Click);
             // 
             // ProjectSelect
             // 
