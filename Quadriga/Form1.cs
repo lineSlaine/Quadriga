@@ -175,7 +175,7 @@ namespace Quadriga
         private void ButtonTasks_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            //OpenChildForm(Form childForm);
+            OpenChildForm(new MyTasksMenu(this,authentication,false,""));
         }
 
         private void ButtonLPeople_Click(object sender, EventArgs e)

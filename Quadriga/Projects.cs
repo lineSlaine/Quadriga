@@ -113,6 +113,11 @@ namespace Quadriga
             StateSwitch();
         }
 
+        public void UpdateName()
+        {
+            labelProjectName.Text = projectName;
+        }
+
         private void buttonCreateGroup_Click(object sender, EventArgs e)
         {
             OpenChildForm(new CreateProject(this, authentication));
@@ -151,6 +156,11 @@ namespace Quadriga
             projectName = null;
             StateSwitch();
             activeForm.Close();
+        }
+
+        private void labelProjectName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

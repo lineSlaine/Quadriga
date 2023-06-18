@@ -29,23 +29,42 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonTasks = new System.Windows.Forms.Button();
             this.labelError = new System.Windows.Forms.Label();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.listBox = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.buttonTasks);
             this.panel1.Controls.Add(this.labelError);
             this.panel1.Controls.Add(this.buttonDelete);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Enabled = false;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(813, 51);
             this.panel1.TabIndex = 0;
+            this.panel1.Visible = false;
+            // 
+            // buttonTasks
+            // 
+            this.buttonTasks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.buttonTasks.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonTasks.FlatAppearance.BorderSize = 0;
+            this.buttonTasks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTasks.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonTasks.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonTasks.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonTasks.Location = new System.Drawing.Point(210, 0);
+            this.buttonTasks.Name = "buttonTasks";
+            this.buttonTasks.Size = new System.Drawing.Size(210, 51);
+            this.buttonTasks.TabIndex = 19;
+            this.buttonTasks.Text = "Задачи";
+            this.buttonTasks.UseVisualStyleBackColor = false;
+            this.buttonTasks.Click += new System.EventHandler(this.button1_Click);
             // 
             // labelError
             // 
@@ -96,22 +115,7 @@
             this.listBox.Name = "listBox";
             this.listBox.Size = new System.Drawing.Size(813, 405);
             this.listBox.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(210, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(210, 51);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Задачи";
-            this.button1.UseVisualStyleBackColor = false;
+            this.listBox.SelectedIndexChanged += new System.EventHandler(this.listBox_SelectedIndexChanged);
             // 
             // ListOfPeople
             // 
@@ -135,6 +139,6 @@
         private Button buttonDelete;
         private ListBox listBox;
         private Label labelError;
-        private Button button1;
+        private Button buttonTasks;
     }
 }

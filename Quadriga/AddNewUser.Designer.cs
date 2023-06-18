@@ -262,7 +262,6 @@
             this.textJob.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textJob.Location = new System.Drawing.Point(342, 220);
             this.textJob.Name = "textJob";
-            this.textJob.PasswordChar = '*';
             this.textJob.PlaceholderText = "  Job";
             this.textJob.Size = new System.Drawing.Size(256, 23);
             this.textJob.TabIndex = 36;

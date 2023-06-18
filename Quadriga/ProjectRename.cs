@@ -38,6 +38,8 @@ namespace Quadriga
             {
                 await projectHelper.RenameProject(textUsername.Text.Trim(), owner.projectID, authentication.database);
                 labelSuccessfully.Visible = true;
+                owner.projectName = textUsername.Text.Trim();
+                owner.UpdateName();
             }
             else labelIncorrectName.Visible = true;
         }

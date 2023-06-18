@@ -50,36 +50,6 @@ namespace Quadriga
                 {
                     labelError.Text = authentication.ex;
                 }
-                
-            }
-
-
-
-
-
-            if (checkAgree.Checked)
-            {
-                buttonEnter.BackColor = activeColor;
-                buttonEnter.Enabled = true;
-            }
-            else
-            {
-                buttonEnter.BackColor = inactiveColor;
-                buttonEnter.Enabled = false;
-            }
-        }
-
-        private void checkAgree_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkAgree.Checked)
-            {
-                buttonEnter.BackColor = activeColor;
-                buttonEnter.Enabled = true;
-            }
-            else
-            {
-                buttonEnter.BackColor = inactiveColor;
-                buttonEnter.Enabled = false;
             }
         }
 

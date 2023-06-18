@@ -15,12 +15,14 @@ namespace Quadriga
         FormMain owner;
         Authentication authentication;
         UserHelper userHelper;
+
         public ListOfPeople(FormMain owner, Authentication authentication)
         {
             InitializeComponent();
             this.owner = owner;
             this.authentication = authentication;
             userHelper = new UserHelper();
+
         }
 
         private async void buttonDelete_Click(object sender, EventArgs e)
@@ -45,6 +47,11 @@ namespace Quadriga
                 buttonDelete.Enabled = false;
                 buttonDelete.Visible = false;
             }
+            if (owner.LVL < 2)
+            {
+                panel1.Visible = true;
+                panel1.Enabled = true;
+            }
 
             Update();
         }
@@ -57,6 +64,19 @@ namespace Quadriga
             {
                 listBox.Items.Add(userHelper.currentUserID[i]+ " " + userHelper.currentUserNames[i]);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(listBox.SelectedItems.Count != 0)
+            {
+                owner.OpenChildForm(new MyTasksMenu(owner, authentication, true, userHelper.currentUserID[listBox.SelectedIndex]));
+            }
+        }
+
+        private void listBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

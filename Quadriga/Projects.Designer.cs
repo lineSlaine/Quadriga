@@ -205,6 +205,7 @@
             this.labelProjectName.Text = "Название проекта";
             this.labelProjectName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelProjectName.Visible = false;
+            this.labelProjectName.Click += new System.EventHandler(this.labelProjectName_Click);
             // 
             // panelActiveForm
             // 
